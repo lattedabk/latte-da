@@ -341,7 +341,7 @@ function App() {
                       initial={{ opacity: 0, scale: 0, rotate: 0 }}
                       animate={{ opacity: 0.3, scale: 1, rotate: 15 }}
                       transition={{ duration: 1.5, delay: 0.8 }}
-                      className="absolute -right-24 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
                     />
                   </div>
 
@@ -387,7 +387,7 @@ function App() {
                   initial={{ scale: 0, rotate: -20 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  className="absolute w-[700px] h-[700px] opacity-20 -right-20"
+                  className="absolute w-[400px] h-[400px] md:w-[700px] md:h-[700px] opacity-20 -right-10 md:-right-20"
                 />
 
                 {/* Large Hero Mascot - Main Visual Element */}
