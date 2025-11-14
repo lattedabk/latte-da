@@ -341,7 +341,7 @@ function App() {
                       initial={{ opacity: 0, scale: 0, rotate: 0 }}
                       animate={{ opacity: 0.3, scale: 1, rotate: 15 }}
                       transition={{ duration: 1.5, delay: 0.8 }}
-                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 pointer-events-none"
                     />
                   </div>
 
@@ -387,7 +387,7 @@ function App() {
                   initial={{ scale: 0, rotate: -20 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  className="absolute w-[400px] h-[400px] md:w-[700px] md:h-[700px] opacity-20 -right-10 md:-right-20"
+                  className="absolute w-[400px] h-[400px] md:w-[700px] md:h-[700px] opacity-20 -right-10 md:-right-20 pointer-events-none"
                 />
 
                 {/* Large Hero Mascot - Main Visual Element */}
@@ -419,7 +419,7 @@ function App() {
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.6 }}
-                  className="absolute bottom-10 right-10 w-24 h-24 md:w-32 md:h-32"
+                  className="absolute bottom-10 right-10 w-24 h-24 md:w-32 md:h-32 pointer-events-none"
                 />
               </div>
             </div>
@@ -429,7 +429,7 @@ function App() {
         {/* About Section - "The Latte Da Way" from latte-da-opus */}
         <section id="about" className="scroll-mt-24 py-20 bg-latte-cream relative overflow-visible" ref={aboutRef}>
           {/* Cappuccino Foam Top Border - extends into hero section above */}
-          <div className="absolute -top-24 md:-top-32 left-0 w-full overflow-visible leading-none z-50">
+          <div className="absolute -top-24 md:-top-32 left-0 w-full overflow-visible leading-none z-50 pointer-events-none">
             <svg
               className="relative block w-full h-32 md:h-48"
               xmlns="http://www.w3.org/2000/svg"
@@ -456,10 +456,10 @@ function App() {
           </div>
 
           {/* Background decorative elements */}
-          <div className="absolute bottom-0 right-0 w-64 h-64 opacity-10">
+          <div className="absolute bottom-0 right-0 w-64 h-64 opacity-10 pointer-events-none">
             <img src="/leaf-green.svg" alt="" className="w-full h-full" />
           </div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 opacity-10 rotate-180">
+          <div className="absolute bottom-0 left-0 w-48 h-48 opacity-10 rotate-180 pointer-events-none">
             <img src="/leaf-green.svg" alt="" className="w-full h-full" />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -558,7 +558,7 @@ function App() {
 
                   {/* Floating decorative elements */}
                   <motion.div
-                    className="absolute -top-4 -right-4 w-20 h-20 opacity-50"
+                    className="absolute -top-4 -right-4 w-20 h-20 opacity-50 pointer-events-none"
                     animate={{
                       rotate: 360,
                     }}
@@ -572,7 +572,7 @@ function App() {
                   </motion.div>
 
                   <motion.div
-                    className="absolute -bottom-4 -left-4 w-16 h-16 opacity-50"
+                    className="absolute -bottom-4 -left-4 w-16 h-16 opacity-50 pointer-events-none"
                     animate={{
                       y: [0, -10, 0],
                     }}
@@ -605,7 +605,7 @@ function App() {
         {/* Menu Section - Switchable menu from latte-da-opus */}
         <section id="menu" className="scroll-mt-24 py-20 bg-latte-light relative overflow-hidden" ref={menuRef}>
           {/* Background decoration */}
-          <div className="absolute top-10 right-10 w-96 h-96 opacity-5">
+          <div className="absolute top-10 right-10 w-96 h-96 opacity-5 pointer-events-none">
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
           </div>
 
