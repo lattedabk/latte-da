@@ -546,16 +546,6 @@ function App() {
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
           </div>
 
-          {/* Coffee Splash Image */}
-          <motion.img
-            src="/coffee-splash.png"
-            alt="Coffee mascot"
-            className="absolute top-10 right-4 md:right-16 w-48 md:w-72 pointer-events-none"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={menuInView ? { opacity: 0.9, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          />
-
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="max-w-3xl mx-auto"
