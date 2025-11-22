@@ -53,50 +53,49 @@ function App() {
     espresso: {
       title: 'espresso drinks',
       items: [
-        { name: 'espresso', description: 'single or double shot', price: '3.50' },
-        { name: 'americano', description: 'espresso with hot water', price: '4.00' },
-        { name: 'cappuccino', description: 'equal parts espresso, steamed milk, foam', price: '5.00' },
-        { name: 'latte', description: 'espresso with steamed milk', price: '5.50' },
-        { name: 'flat white', description: 'double shot with microfoam', price: '5.50' },
-        { name: 'cortado', description: 'equal parts espresso and steamed milk', price: '4.50' },
-        { name: 'macchiato', description: 'espresso with a dollop of foam', price: '4.00' },
-        { name: 'mocha', description: 'chocolate espresso with steamed milk', price: '6.00' },
+        { name: 'espresso', price: '3.50' },
+        { name: 'americano', price: '4.00' },
+        { name: 'cappuccino', price: '5.00' },
+        { name: 'latte', price: '5.50' },
+        { name: 'flat white', price: '5.50' },
+        { name: 'cortado', price: '4.50' },
+        { name: 'macchiato', price: '4.00' },
+        { name: 'mocha', price: '6.00' },
+        { name: 'shaken espresso', price: '5.50' },
       ]
     },
     coffee: {
       title: 'coffee',
       items: [
-        { name: 'drip coffee', description: 'house blend, freshly brewed', price: '3.00' },
-        { name: 'pour over', description: 'single origin, hand-poured', price: '5.00' },
-        { name: 'cold brew', description: 'smooth, low-acid, served over ice', price: '4.50' },
-        { name: 'nitro cold brew', description: 'creamy cold brew on tap', price: '5.50' },
-        { name: 'french press', description: 'full-bodied, 12oz serving', price: '4.50' },
-        { name: 'iced coffee', description: 'fresh brewed, served over ice', price: '3.50' },
+        { name: 'drip coffee', price: '3.00' },
+        { name: 'pour over', price: '5.00' },
+        { name: 'cold brew', price: '4.50' },
+        { name: 'yama cold brew', price: '5.00' },
       ]
     },
     specialty: {
       title: 'specialty drinks',
       items: [
-        { name: 'matcha latte', description: 'ceremonial grade matcha with milk', price: '6.00' },
-        { name: 'chai latte', description: 'spiced tea with steamed milk', price: '5.50' },
-        { name: 'golden milk', description: 'turmeric, ginger, cinnamon blend', price: '6.00' },
-        { name: 'hot chocolate', description: 'rich belgian chocolate', price: '5.00' },
-        { name: 'seasonal special', description: 'ask about our current creation', price: '6.50' },
-        { name: 'iced matcha', description: 'ceremonial matcha over ice', price: '6.50' },
-        { name: 'lavender latte', description: 'house-made lavender syrup', price: '6.00' },
+        { name: 'matcha latte', price: '6.00' },
+        { name: 'chai latte', price: '5.50' },
+        { name: 'golden milk', price: '6.00' },
+        { name: 'hot chocolate', price: '5.00' },
+        { name: 'seasonal special', price: '6.50' },
+        { name: 'iced matcha', price: '6.50' },
+        { name: 'lavender latte', price: '6.00' },
+        { name: 'maple cinnamon latte', price: '6.00' },
       ]
     },
     food: {
       title: 'pastries & light bites',
       items: [
-        { name: 'croissant', description: 'buttery, flaky, fresh-baked', price: '4.50' },
-        { name: 'avocado toast', description: 'sourdough, avocado, everything seasoning', price: '8.00' },
-        { name: 'granola bowl', description: 'house granola, yogurt, seasonal fruit', price: '7.50' },
-        { name: 'breakfast sandwich', description: 'egg, cheese, choice of protein', price: '8.50' },
-        { name: 'bagel & cream cheese', description: 'nyc bagel, plain or everything', price: '4.00' },
-        { name: 'almond croissant', description: 'filled with almond cream', price: '5.50' },
-        { name: 'banana bread', description: 'house-made, served warm', price: '4.00' },
-        { name: 'overnight oats', description: 'chia, almond milk, berries', price: '6.50' },
+        { name: 'croissant', price: '4.50' },
+        { name: 'granola bowl', price: '7.50' },
+        { name: 'banana bread', price: '4.00' },
+        { name: 'overnight oats', price: '6.50' },
+        { name: 'donuts', price: '3.50' },
+        { name: 'danishes', price: '4.50' },
+        { name: 'cookies', price: '3.00' },
       ]
     }
   }
@@ -107,22 +106,22 @@ function App() {
   }))
 
   const hiringBenefits = [
-    'Creative studio-style workspace',
-    'Collaborative team energy',
-    'Training with head roaster & beverage leads',
-    'Flexible scheduling & community events',
+    'creative studio-style workspace',
+    'collaborative team energy',
+    'training with head roaster & beverage leads',
+    'flexible scheduling & community events',
   ]
 
   const hours = [
-    { day: 'Monday - Friday', time: '7:00 AM - 7:00 PM' },
-    { day: 'Saturday', time: '8:00 AM - 8:00 PM' },
-    { day: 'Sunday', time: '8:00 AM - 8:00 PM' },
+    { day: 'monday - friday', time: '7:00 am - 4:00 pm' },
+    { day: 'saturday', time: '8:00 am - 5:00 pm' },
+    { day: 'sunday', time: '8:00 am - 5:00 pm' },
   ]
 
   return (
     <div className="min-h-screen bg-latte-light font-helvetica">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <header className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#FDF6E3' }}>
         <div className="container mx-auto px-4 py-4 relative">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -200,7 +199,7 @@ function App() {
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="mailto:hello@latteda.com"
+                  href="mailto:hello@lattedacafes.com"
                   className="text-gray-600 hover:text-latte-blue transition-colors duration-200"
                   aria-label="Email"
                 >
@@ -278,7 +277,7 @@ function App() {
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="mailto:hello@latteda.com"
+                  href="mailto:hello@lattedacafes.com"
                   className="text-gray-600 hover:text-latte-blue transition-colors duration-200"
                   aria-label="Email"
                 >
@@ -531,10 +530,9 @@ function App() {
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <p className="text-lg text-gray-700">we buy from farmers we know.</p>
-                  <p className="text-lg text-gray-700">we roast small batches, often.</p>
-                  <p className="text-lg text-gray-700">we don't hoard beans in some warehouse in jersey.</p>
-                  <p className="text-2xl text-latte-jade mt-4">we make good coffee.</p>
+                  <p className="text-lg text-gray-700 mb-4">we buy from farmers we know, who roast small batches, often.</p>
+                  <p className="text-lg text-gray-700 mb-4">we don't hoard beans in some warehouse in jersey.</p>
+                  <p className="text-2xl text-latte-jade mb-4">we make good coffee. find us in bay ridge. off 3rd avenue towards ridge. big windows. come say hi.</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -542,11 +540,21 @@ function App() {
         </section>
 
         {/* Menu Section - Switchable menu from latte-da-opus */}
-        <section id="menu" className="scroll-mt-24 py-20 bg-latte-light relative overflow-hidden" ref={menuRef}>
+        <section id="menu" className="scroll-mt-24 py-20 relative overflow-hidden" style={{ backgroundColor: '#FDF6E3' }} ref={menuRef}>
           {/* Background decoration */}
           <div className="absolute top-10 right-10 w-96 h-96 opacity-5 pointer-events-none">
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
           </div>
+
+          {/* Coffee Splash Image */}
+          <motion.img
+            src="/coffee-splash.png"
+            alt="Coffee mascot"
+            className="absolute top-10 right-4 md:right-16 w-48 md:w-72 pointer-events-none"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={menuInView ? { opacity: 0.9, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -596,10 +604,14 @@ function App() {
                     onClick={() => setActiveMenuCategory(cat.id)}
                     className={`px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all ${
                       activeMenuCategory === cat.id
-                        ? 'bg-latte-blue text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100'
+                        ? 'bg-latte-jade text-white'
+                        : 'text-gray-700 hover:opacity-80'
                     }`}
-                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
+                    style={{
+                      fontFamily: 'Mezzogiorno',
+                      fontWeight: 700,
+                      backgroundColor: activeMenuCategory === cat.id ? undefined : '#FDF6E3'
+                    }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -610,7 +622,8 @@ function App() {
 
               {/* Menu Items */}
               <motion.div
-                className="bg-white rounded-3xl shadow-xl p-6 md:p-10"
+                className="rounded-3xl shadow-xl p-6 md:p-10"
+                style={{ backgroundColor: '#FDF6E3' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -625,10 +638,9 @@ function App() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                     >
-                      <h3 className="text-lg md:text-xl font-semibold text-latte-blue mb-1" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                      <h3 className="text-lg md:text-xl font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                         {item.name}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>{item.description}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -641,7 +653,7 @@ function App() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <p className="text-sm text-gray-600 text-center" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                    {activeMenuCategory === 'espresso' && 'all espresso drinks available with oat, almond, or soy milk +$0.50'}
+                    {activeMenuCategory === 'espresso' && 'all espresso drinks available with oat or almond milk'}
                     {activeMenuCategory === 'coffee' && 'we rotate our single origin beans weekly - ask your barista for current selection'}
                     {activeMenuCategory === 'specialty' && 'all drinks can be customized to your preference - just ask!'}
                     {activeMenuCategory === 'food' && 'fresh items delivered daily from local brooklyn bakeries'}
@@ -675,28 +687,28 @@ function App() {
             <div className="space-y-6">
               {/* Section Header */}
               <div className="space-y-4">
-                <p className="text-xs uppercase tracking-[0.45em] text-latte-blue/70">Careers</p>
-                <h2 className="text-3xl md:text-4xl font-semibold text-slate-900">
-                  We're hiring experienced baristas who love great coffee.
+                <p className="text-xs tracking-[0.45em] text-latte-blue/70" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>careers</p>
+                <h2 className="text-3xl md:text-4xl font-semibold text-slate-900" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  we're hiring experienced baristas who love great coffee.
                 </h2>
-                <p className="text-base text-slate-600 max-w-3xl">
-                  If you're passionate about coffee craft and creating memorable experiences, we want to meet you.
+                <p className="text-base text-slate-600 max-w-3xl" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  if you're passionate about coffee craft and creating memorable experiences, we want to meet you.
                 </p>
               </div>
               <ul className="space-y-3">
                 {hiringBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-3 text-sm text-slate-600">
+                  <li key={benefit} className="flex items-center gap-3 text-sm text-slate-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                     <span className="h-2 w-2 rounded-full bg-latte-jade" />
                     {benefit}
                   </li>
                 ))}
               </ul>
-              <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-5 text-sm text-slate-700">
-                Send questions to{' '}
+              <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-5 text-sm text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                send questions to{' '}
                 <a href="mailto:hello@lattedacafes.com" className="font-semibold text-latte-blue underline">
                   hello@lattedacafes.com
                 </a>{' '}
-                or drop your info below. We review applications weekly.
+                or drop your info below. we review applications weekly.
               </div>
             </div>
             <form
@@ -704,43 +716,47 @@ function App() {
               onSubmit={(event) => event.preventDefault()}
             >
               <div className="grid gap-4">
-                <label className="text-sm font-semibold text-slate-700">
-                  Name
+                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  name
                   <input
                     type="text"
                     required
-                    placeholder="Full name"
+                    placeholder="full name"
                     className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
+                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   />
                 </label>
-                <label className="text-sm font-semibold text-slate-700">
-                  Email
+                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  email
                   <input
                     type="email"
                     required
                     placeholder="name@email.com"
                     className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
+                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   />
                 </label>
                 <div className="text-sm">
-                  <p className="font-semibold text-slate-700 mb-2">Position</p>
+                  <p className="font-semibold text-slate-700 mb-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>position</p>
                   <div className="rounded-2xl border border-latte-jade bg-latte-light/50 px-4 py-3">
-                    <span className="text-latte-jade font-medium">Barista Position</span>
+                    <span className="text-latte-jade font-medium" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>barista position</span>
                   </div>
                 </div>
-                <label className="text-sm font-semibold text-slate-700">
-                  Message
+                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  message
                   <textarea
                     rows={4}
-                    placeholder="Tell us about your vibe, experience, and availability..."
+                    placeholder="tell us about your vibe, experience, and availability..."
                     className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
+                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   />
                 </label>
                 <button
                   type="submit"
-                  className="rounded-full bg-latte-jade px-6 py-3 text-sm font-semibold uppercase tracking-[0.4em] text-white transition hover:-translate-y-0.5"
+                  className="rounded-full bg-latte-jade px-6 py-3 text-sm font-semibold tracking-[0.4em] text-white transition hover:-translate-y-0.5"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                 >
-                  Submit
+                  submit
                 </button>
               </div>
             </form>
@@ -749,7 +765,7 @@ function App() {
       </main>
 
       {/* Footer - From latte-da-opus with black and white map */}
-      <footer className="bg-latte-cream" ref={footerRef}>
+      <footer className="" style={{ backgroundColor: '#FDF6E3' }} ref={footerRef}>
         {/* Map Section */}
         <div className="w-full h-96 md:h-[450px] relative">
           <iframe
@@ -776,13 +792,11 @@ function App() {
               className="lg:col-span-1"
             >
               <img
-                src="/latte da full logo title.svg"
+                src="/latte-da-new-logo.svg"
                 alt="Latte Da"
-                className="h-12 mb-4"
+                className="h-10 mb-4"
               />
-              <p className="text-gray-700 text-sm">
-                <span style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>a small ritual done right.</span> Your neighborhood coffee shop in the heart of Brooklyn.
-              </p>
+              <p className="text-gray-700 text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>we'll make you something good.</p>
             </motion.div>
 
             {/* Hours */}
@@ -791,13 +805,13 @@ function App() {
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="font-bold text-latte-blue mb-4 flex items-center gap-2">
+              <h3 className="font-bold text-latte-blue mb-4 flex items-center gap-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                 <Clock className="w-5 h-5" />
-                Hours
+                hours
               </h3>
               <div className="space-y-2">
                 {hours.map((schedule) => (
-                  <div key={schedule.day} className="text-sm">
+                  <div key={schedule.day} className="text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                     <span className="text-gray-700 font-medium">{schedule.day}</span>
                     <span className="text-gray-600 block">{schedule.time}</span>
                   </div>
@@ -811,25 +825,27 @@ function App() {
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="font-bold text-latte-blue mb-4">Contact</h3>
+              <h3 className="font-bold text-latte-blue mb-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>contact</h3>
               <div className="space-y-3">
                 <a
-                  href="tel:+17189998888"
+                  href="tel:+13474920223"
                   className="flex items-center gap-2 text-gray-700 hover:text-latte-jade transition-colors"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">(718) 999-8888</span>
+                  <span className="text-sm">(347) 492-0223</span>
                 </a>
                 <a
-                  href="mailto:hello@latteda.com"
+                  href="mailto:hello@lattedacafes.com"
                   className="flex items-center gap-2 text-gray-700 hover:text-latte-jade transition-colors"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                 >
                   <Mail className="w-4 h-4" />
-                  <span className="text-sm">hello@latteda.com</span>
+                  <span className="text-sm">hello@lattedacafes.com</span>
                 </a>
-                <div className="flex items-center gap-2 text-gray-700">
+                <div className="flex items-center gap-2 text-gray-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   <MapPin className="w-4 h-4" />
-                  <span className="text-sm">280 86th St, Brooklyn</span>
+                  <span className="text-sm">280 86th st, brooklyn</span>
                 </div>
               </div>
             </motion.div>
@@ -840,7 +856,7 @@ function App() {
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="font-bold text-latte-blue mb-4">Connect</h3>
+              <h3 className="font-bold text-latte-blue mb-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>connect</h3>
               <div className="flex gap-4 mb-4">
                 <motion.a
                   href="https://facebook.com"
@@ -863,7 +879,7 @@ function App() {
                   <Instagram className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="mailto:hello@latteda.com"
+                  href="mailto:hello@lattedacafes.com"
                   className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-latte-jade hover:text-white transition-all"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
@@ -871,8 +887,8 @@ function App() {
                   <Mail className="w-5 h-5" />
                 </motion.a>
               </div>
-              <p className="text-sm text-gray-600">
-                Follow us for daily specials and coffee tips!
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                follow us for daily specials and coffee tips!
               </p>
             </motion.div>
           </div>
@@ -885,15 +901,15 @@ function App() {
             className="mt-12 pt-8 border-t border-gray-300"
           >
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-sm text-gray-600">
-                © 2025 Latte Da. All rights reserved.
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                © 2025 latte da. all rights reserved.
               </p>
               <div className="flex gap-6 text-sm">
-                <a href="#" className="text-gray-600 hover:text-latte-jade transition-colors">
-                  Privacy Policy
+                <a href="#" className="text-gray-600 hover:text-latte-jade transition-colors" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  privacy policy
                 </a>
-                <a href="#" className="text-gray-600 hover:text-latte-jade transition-colors">
-                  Terms of Service
+                <a href="#" className="text-gray-600 hover:text-latte-jade transition-colors" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  terms of service
                 </a>
               </div>
             </div>
