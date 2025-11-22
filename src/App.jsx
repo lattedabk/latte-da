@@ -532,7 +532,7 @@ function App() {
                 >
                   <p className="text-lg text-gray-700 mb-4">we buy from farmers we know, who roast small batches, often.</p>
                   <p className="text-lg text-gray-700 mb-4">we don't hoard beans in some warehouse in jersey.</p>
-                  <p className="text-2xl text-latte-jade mb-4">we make good coffee. find us in bay ridge. off 3rd avenue towards ridge. big windows. come say hi.</p>
+                  <p className="text-2xl text-latte-jade mb-4">we make good coffee.</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -773,7 +773,7 @@ function App() {
 
         {/* Info Section */}
         <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Logo & About */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -787,6 +787,7 @@ function App() {
                 className="h-10 mb-4"
               />
               <p className="text-gray-700 text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>we'll make you something good.</p>
+              <p className="text-gray-700 text-sm mt-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>find us. bay ridge, brooklyn. off 3rd avenue. big windows. come say hi.</p>
             </motion.div>
 
             {/* Hours */}
@@ -880,6 +881,16 @@ function App() {
               <p className="text-sm text-gray-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                 follow us for daily specials and coffee tips!
               </p>
+            </motion.div>
+
+            {/* Coffee Splash Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={footerInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="hidden lg:flex items-center justify-center"
+            >
+              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-64" />
             </motion.div>
           </div>
 
