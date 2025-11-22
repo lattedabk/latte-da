@@ -133,9 +133,9 @@ function App() {
               className="flex items-center gap-4"
             >
               <img
-                src="/latte da full logo title.svg"
+                src="/latte-da-new-logo.svg"
                 alt="Latte Da"
-                className="h-12 md:h-16 w-auto cursor-pointer"
+                className="h-8 md:h-10 w-auto cursor-pointer"
                 onClick={() => scrollToSection('home')}
               />
               <div className="hidden md:flex items-center gap-3">
@@ -327,12 +327,12 @@ function App() {
 
                   {/* Bold, left-aligned headline */}
                   <div className="relative inline-block">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-latte-jade leading-tight">
-                      A Small
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-latte-jade leading-tight" style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>
+                      a small
                       <br />
-                      Ritual
+                      <span className="text-latte-blue">ritual</span>
                       <br />
-                      Done Right
+                      done right
                     </h1>
                     {/* Coffee Beans - Positioned after "A Small" */}
                     <motion.img
@@ -345,34 +345,26 @@ function App() {
                     />
                   </div>
 
-                  {/* Subheading with breathing room */}
-                  <div className="space-y-4 max-w-lg">
-                    <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-                      Brooklyn's newest neighborhood spot for crisp espresso and quietly exceptional coffee.
-                    </p>
-                    <p className="text-base md:text-lg text-gray-600">
-                      Drop in for something freshly made. Stay for the warm, <span className="whitespace-nowrap">cozy vibe.</span>
-                    </p>
-                  </div>
-
                   {/* CTAs - Stacked vertically for visual interest */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <motion.button
                       onClick={() => scrollToSection('menu')}
-                      className="bg-latte-blue text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-xl hover:shadow-2xl"
+                      className="bg-latte-jade text-white px-10 py-5 rounded-full text-lg hover:bg-opacity-90 transition-all duration-200 shadow-xl hover:shadow-2xl"
+                      style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                       whileHover={{ scale: 1.05, x: 10 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      Explore Menu →
+                      menu
                     </motion.button>
 
                     <motion.button
                       onClick={() => scrollToSection('about')}
-                      className="bg-white text-latte-blue border-2 border-latte-blue px-10 py-5 rounded-full text-lg font-medium hover:bg-latte-blue hover:text-white transition-all duration-200 shadow-lg"
+                      className="bg-latte-jade text-white px-10 py-5 rounded-full text-lg hover:bg-opacity-90 transition-all duration-200 shadow-lg"
+                      style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      The Latte Da Way
+                      the latte da way
                     </motion.button>
                   </div>
                 </motion.div>
@@ -398,7 +390,7 @@ function App() {
                   className="relative z-10"
                 >
                   <motion.img
-                    src="/latte da mascot iso.svg"
+                    src="/latte-da-dude.svg"
                     alt="Latte Da Mascot"
                     className="w-64 h-64 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] drop-shadow-2xl"
                     animate={{
@@ -462,6 +454,16 @@ function App() {
           <div className="absolute bottom-0 left-0 w-48 h-48 opacity-10 rotate-180 pointer-events-none">
             <img src="/leaf-green.svg" alt="" className="w-full h-full" />
           </div>
+
+          {/* Coffee Splash Mascot - Top Right */}
+          <motion.img
+            src="/coffee-splash.png"
+            alt="Coffee mascot"
+            className="absolute top-8 right-4 md:right-12 lg:right-24 w-48 md:w-64 lg:w-80 pointer-events-none"
+            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+            animate={aboutInView ? { opacity: 0.9, scale: 1, rotate: 5 } : { opacity: 0, scale: 0.8, rotate: -10 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="max-w-6xl mx-auto"
@@ -470,134 +472,76 @@ function App() {
               transition={{ duration: 0.8 }}
             >
               {/* Section Header */}
-              <div className="text-center mb-16">
+              <div className="text-left mb-16 max-w-3xl mx-auto">
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold text-latte-blue mb-4"
+                  className="text-4xl md:text-5xl text-latte-blue mb-4"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  The Latte Da Way
+                  fresh coffee.<br />
+                  that's it.<br />
+                  that's the thing.
                 </motion.h2>
                 <motion.div
-                  className="w-24 h-1 bg-latte-jade mx-auto rounded-full"
+                  className="w-24 h-1 bg-latte-jade rounded-full"
                   initial={{ width: 0 }}
                   animate={aboutInView ? { width: 96 } : { width: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 />
               </div>
 
-              {/* Main Content Grid */}
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                {/* Left Column - Philosophy Text */}
+              {/* Main Content */}
+              <div className="max-w-3xl mx-auto" style={{ fontFamily: 'Mezzogiorno', fontWeight: 600 }}>
+                {/* Intro Text */}
                 <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={aboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                  className="space-y-6 text-left mb-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    <span className="text-2xl font-bold text-latte-jade">Latte Da</span> is more than a coffee shop—it's
-                    a small ritual done right. Where a French bistro's charm meets the tranquil energy of a
-                    rainforest retreat, all wrapped up in Brooklyn's unmistakable hip vibe.
+                    most coffee sits in warehouses for six months before it hits your cup.  we thought that was weird.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    We believe coffee should fit effortlessly into your day. Drop in for a crisp espresso
-                    on your way to work, or wander by for something freshly made and quietly exceptional.
-                    Our craft is simple: beans at their peak freshness, ingredients we're proud of, and
-                    recipes that honor both tradition and innovation.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    The room feels easy—warm wood, soft light, and a cozy atmosphere that invites you to
-                    linger. No frills or pretense, just the focus on what matters: the cup in your hand
-                    and the moment of peace it brings.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed font-medium">
-                    A neighborhood spot that knows your order, remembers your name, and sends you back
-                    into the day a little lighter than you arrived.
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    we source coffee that's farm to cup in 10 days.  not because we're fancy.  because fresh coffee tastes better.  obviously.
                   </p>
                 </motion.div>
 
-                {/* Right Column - Visual Elements */}
-                <motion.div
-                  className="relative"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={aboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  <div className="relative bg-white rounded-3xl p-8 shadow-xl">
-                    {/* Central Logo */}
-                    <div className="flex justify-center mb-6">
-                      <img
-                        src="/latte da circle.svg"
-                        alt="Latte Da Logo"
-                        className="w-48 h-48"
-                      />
+                {/* Stats with Mascot */}
+                <div className="relative mb-12">
+                  <motion.div
+                    className="grid grid-cols-2 gap-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                  >
+                    <div className="text-left">
+                      <div className="text-6xl md:text-7xl text-latte-jade" style={{ fontWeight: 900 }}>10</div>
+                      <div className="text-sm text-gray-600 mt-2">days, farm to cup</div>
                     </div>
+                    <div className="text-left">
+                      <div className="text-6xl md:text-7xl text-black" style={{ fontWeight: 900 }}>180</div>
+                      <div className="text-sm text-gray-600 mt-2">days, industry average</div>
+                    </div>
+                  </motion.div>
 
-                    {/* Values Grid */}
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div className="bg-latte-light rounded-xl p-4">
-                        <div className="text-2xl font-bold text-latte-blue mb-1">Fresh</div>
-                        <div className="text-sm text-gray-600">Peak Quality Beans</div>
-                      </div>
-                      <div className="bg-latte-light rounded-xl p-4">
-                        <div className="text-2xl font-bold text-latte-jade mb-1">Local</div>
-                        <div className="text-sm text-gray-600">Brooklyn Born</div>
-                      </div>
-                      <div className="bg-latte-light rounded-xl p-4">
-                        <div className="text-2xl font-bold text-latte-jade mb-1">Mindful</div>
-                        <div className="text-sm text-gray-600">Holistic Approach</div>
-                      </div>
-                      <div className="bg-latte-light rounded-xl p-4">
-                        <div className="text-2xl font-bold text-latte-blue mb-1">Crafted</div>
-                        <div className="text-sm text-gray-600">With Purpose</div>
-                      </div>
-                    </div>
                   </div>
 
-                  {/* Floating decorative elements */}
-                  <motion.div
-                    className="absolute -top-4 -right-4 w-20 h-20 opacity-50 pointer-events-none"
-                    animate={{
-                      rotate: 360,
-                    }}
-                    transition={{
-                      duration: 60,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                  >
-                    <img src="/coffee beans.svg" alt="" className="w-full h-full" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute -bottom-4 -left-4 w-16 h-16 opacity-50 pointer-events-none"
-                    animate={{
-                      y: [0, -10, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  >
-                    <img src="/coffee cup.svg" alt="" className="w-full h-full" />
-                  </motion.div>
+                {/* The Short Version */}
+                <motion.div
+                  className="text-left space-y-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <p className="text-lg text-gray-700">we buy from farmers we know.</p>
+                  <p className="text-lg text-gray-700">we roast small batches, often.</p>
+                  <p className="text-lg text-gray-700">we don't hoard beans in some warehouse in jersey.</p>
+                  <p className="text-2xl text-latte-jade mt-4">we make good coffee.</p>
                 </motion.div>
               </div>
-
-              {/* Bottom Quote */}
-              <motion.div
-                className="mt-16 text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <blockquote className="text-2xl md:text-3xl text-latte-jade font-light italic">
-                  "Where every sip feels like coming home"
-                </blockquote>
-              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -839,7 +783,7 @@ function App() {
                 className="h-12 mb-4"
               />
               <p className="text-gray-700 text-sm">
-                A small ritual done right. Your neighborhood coffee shop in the heart of Brooklyn.
+                <span style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>a small ritual done right.</span> Your neighborhood coffee shop in the heart of Brooklyn.
               </p>
             </motion.div>
 

@@ -2,13 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-LightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-RegularOblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-SemiBoldOblique.otf') format('opentype');
+  font-weight: 600;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-BoldOblique.otf') format('opentype');
+  font-weight: 700;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-ExtraBoldOblique.otf') format('opentype');
+  font-weight: 800;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mezzogiorno';
+  src: url('/fonts/Mezzogiorno-BlackOblique.otf') format('opentype');
+  font-weight: 900;
+  font-style: oblique;
+}
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Mezzogiorno', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
