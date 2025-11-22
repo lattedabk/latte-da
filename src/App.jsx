@@ -51,52 +51,52 @@ function App() {
 
   const menuCategories = {
     espresso: {
-      title: 'Espresso Drinks',
+      title: 'espresso drinks',
       items: [
-        { name: 'Espresso', description: 'Single or double shot', price: '3.50' },
-        { name: 'Americano', description: 'Espresso with hot water', price: '4.00' },
-        { name: 'Cappuccino', description: 'Equal parts espresso, steamed milk, foam', price: '5.00' },
-        { name: 'Latte', description: 'Espresso with steamed milk', price: '5.50' },
-        { name: 'Flat White', description: 'Double shot with microfoam', price: '5.50' },
-        { name: 'Cortado', description: 'Equal parts espresso and steamed milk', price: '4.50' },
-        { name: 'Macchiato', description: 'Espresso with a dollop of foam', price: '4.00' },
-        { name: 'Mocha', description: 'Chocolate espresso with steamed milk', price: '6.00' },
+        { name: 'espresso', description: 'single or double shot', price: '3.50' },
+        { name: 'americano', description: 'espresso with hot water', price: '4.00' },
+        { name: 'cappuccino', description: 'equal parts espresso, steamed milk, foam', price: '5.00' },
+        { name: 'latte', description: 'espresso with steamed milk', price: '5.50' },
+        { name: 'flat white', description: 'double shot with microfoam', price: '5.50' },
+        { name: 'cortado', description: 'equal parts espresso and steamed milk', price: '4.50' },
+        { name: 'macchiato', description: 'espresso with a dollop of foam', price: '4.00' },
+        { name: 'mocha', description: 'chocolate espresso with steamed milk', price: '6.00' },
       ]
     },
     coffee: {
-      title: 'Coffee',
+      title: 'coffee',
       items: [
-        { name: 'Drip Coffee', description: 'House blend, freshly brewed', price: '3.00' },
-        { name: 'Pour Over', description: 'Single origin, hand-poured', price: '5.00' },
-        { name: 'Cold Brew', description: 'Smooth, low-acid, served over ice', price: '4.50' },
-        { name: 'Nitro Cold Brew', description: 'Creamy cold brew on tap', price: '5.50' },
-        { name: 'French Press', description: 'Full-bodied, 12oz serving', price: '4.50' },
-        { name: 'Iced Coffee', description: 'Fresh brewed, served over ice', price: '3.50' },
+        { name: 'drip coffee', description: 'house blend, freshly brewed', price: '3.00' },
+        { name: 'pour over', description: 'single origin, hand-poured', price: '5.00' },
+        { name: 'cold brew', description: 'smooth, low-acid, served over ice', price: '4.50' },
+        { name: 'nitro cold brew', description: 'creamy cold brew on tap', price: '5.50' },
+        { name: 'french press', description: 'full-bodied, 12oz serving', price: '4.50' },
+        { name: 'iced coffee', description: 'fresh brewed, served over ice', price: '3.50' },
       ]
     },
     specialty: {
-      title: 'Specialty Drinks',
+      title: 'specialty drinks',
       items: [
-        { name: 'Matcha Latte', description: 'Ceremonial grade matcha with milk', price: '6.00' },
-        { name: 'Chai Latte', description: 'Spiced tea with steamed milk', price: '5.50' },
-        { name: 'Golden Milk', description: 'Turmeric, ginger, cinnamon blend', price: '6.00' },
-        { name: 'Hot Chocolate', description: 'Rich Belgian chocolate', price: '5.00' },
-        { name: 'Seasonal Special', description: 'Ask about our current creation', price: '6.50' },
-        { name: 'Iced Matcha', description: 'Ceremonial matcha over ice', price: '6.50' },
-        { name: 'Lavender Latte', description: 'House-made lavender syrup', price: '6.00' },
+        { name: 'matcha latte', description: 'ceremonial grade matcha with milk', price: '6.00' },
+        { name: 'chai latte', description: 'spiced tea with steamed milk', price: '5.50' },
+        { name: 'golden milk', description: 'turmeric, ginger, cinnamon blend', price: '6.00' },
+        { name: 'hot chocolate', description: 'rich belgian chocolate', price: '5.00' },
+        { name: 'seasonal special', description: 'ask about our current creation', price: '6.50' },
+        { name: 'iced matcha', description: 'ceremonial matcha over ice', price: '6.50' },
+        { name: 'lavender latte', description: 'house-made lavender syrup', price: '6.00' },
       ]
     },
     food: {
-      title: 'Pastries & Light Bites',
+      title: 'pastries & light bites',
       items: [
-        { name: 'Croissant', description: 'Buttery, flaky, fresh-baked', price: '4.50' },
-        { name: 'Avocado Toast', description: 'Sourdough, avocado, everything seasoning', price: '8.00' },
-        { name: 'Granola Bowl', description: 'House granola, yogurt, seasonal fruit', price: '7.50' },
-        { name: 'Breakfast Sandwich', description: 'Egg, cheese, choice of protein', price: '8.50' },
-        { name: 'Bagel & Cream Cheese', description: 'NYC bagel, plain or everything', price: '4.00' },
-        { name: 'Almond Croissant', description: 'Filled with almond cream', price: '5.50' },
-        { name: 'Banana Bread', description: 'House-made, served warm', price: '4.00' },
-        { name: 'Overnight Oats', description: 'Chia, almond milk, berries', price: '6.50' },
+        { name: 'croissant', description: 'buttery, flaky, fresh-baked', price: '4.50' },
+        { name: 'avocado toast', description: 'sourdough, avocado, everything seasoning', price: '8.00' },
+        { name: 'granola bowl', description: 'house granola, yogurt, seasonal fruit', price: '7.50' },
+        { name: 'breakfast sandwich', description: 'egg, cheese, choice of protein', price: '8.50' },
+        { name: 'bagel & cream cheese', description: 'nyc bagel, plain or everything', price: '4.00' },
+        { name: 'almond croissant', description: 'filled with almond cream', price: '5.50' },
+        { name: 'banana bread', description: 'house-made, served warm', price: '4.00' },
+        { name: 'overnight oats', description: 'chia, almond milk, berries', price: '6.50' },
       ]
     }
   }
@@ -149,30 +149,34 @@ function App() {
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
               >
-                Home
+                home
               </button>
               <button
                 onClick={() => scrollToSection('menu')}
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
               >
-                Menu
+                menu
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
               >
-                The Latte Da Way
+                the latte da way
               </button>
 
               {/* Now Hiring Badge */}
               <motion.button
                 onClick={() => scrollToSection('hiring')}
                 className="bg-latte-jade text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Now Hiring
+                now hiring
               </motion.button>
 
               {/* Social Icons */}
@@ -229,28 +233,28 @@ function App() {
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
                 type="button"
               >
-                Home
+                home
               </button>
               <button
                 onClick={() => scrollToSection('menu')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
                 type="button"
               >
-                Menu
+                menu
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
                 type="button"
               >
-                The Latte Da Way
+                the latte da way
               </button>
               <button
                 onClick={() => scrollToSection('hiring')}
                 className="block w-full text-left bg-latte-jade text-white px-4 py-3 rounded-full font-medium hover:bg-opacity-90 active:bg-opacity-80 transition-all duration-200 mt-2 cursor-pointer"
                 type="button"
               >
-                Now Hiring
+                now hiring
               </button>
 
               {/* Mobile Social Icons */}
@@ -455,15 +459,6 @@ function App() {
             <img src="/leaf-green.svg" alt="" className="w-full h-full" />
           </div>
 
-          {/* Coffee Splash Mascot - Top Right */}
-          <motion.img
-            src="/coffee-splash.png"
-            alt="Coffee mascot"
-            className="absolute top-8 right-4 md:right-12 lg:right-24 w-48 md:w-64 lg:w-80 pointer-events-none"
-            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-            animate={aboutInView ? { opacity: 0.9, scale: 1, rotate: 5 } : { opacity: 0, scale: 0.8, rotate: -10 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="max-w-6xl mx-auto"
@@ -564,19 +559,21 @@ function App() {
               <div className="text-center mb-12">
                 <motion.h2
                   className="text-4xl md:text-5xl font-bold text-latte-blue mb-4"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={menuInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  Our Menu
+                  all the hits
                 </motion.h2>
                 <motion.p
                   className="text-lg text-gray-600 max-w-2xl mx-auto"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={menuInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  Carefully crafted beverages and fresh bites, made with love and the finest ingredients
+                  carefully crafted beverages and fresh bites, made with love and the finest ingredients
                 </motion.p>
                 <motion.div
                   className="w-24 h-1 bg-latte-jade mx-auto rounded-full mt-4"
@@ -602,6 +599,7 @@ function App() {
                         ? 'bg-latte-blue text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-100'
                     }`}
+                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -627,10 +625,10 @@ function App() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                     >
-                      <h3 className="text-lg md:text-xl font-semibold text-latte-blue mb-1">
+                      <h3 className="text-lg md:text-xl font-semibold text-latte-blue mb-1" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                         {item.name}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600">{item.description}</p>
+                      <p className="text-sm md:text-base text-gray-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>{item.description}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -642,11 +640,11 @@ function App() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <p className="text-sm text-gray-600 text-center">
-                    {activeMenuCategory === 'espresso' && 'All espresso drinks available with oat, almond, or soy milk +$0.50'}
-                    {activeMenuCategory === 'coffee' && 'We rotate our single origin beans weekly - ask your barista for current selection'}
-                    {activeMenuCategory === 'specialty' && 'All drinks can be customized to your preference - just ask!'}
-                    {activeMenuCategory === 'food' && 'Fresh items delivered daily from local Brooklyn bakeries'}
+                  <p className="text-sm text-gray-600 text-center" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                    {activeMenuCategory === 'espresso' && 'all espresso drinks available with oat, almond, or soy milk +$0.50'}
+                    {activeMenuCategory === 'coffee' && 'we rotate our single origin beans weekly - ask your barista for current selection'}
+                    {activeMenuCategory === 'specialty' && 'all drinks can be customized to your preference - just ask!'}
+                    {activeMenuCategory === 'food' && 'fresh items delivered daily from local brooklyn bakeries'}
                   </p>
                 </motion.div>
               </motion.div>
