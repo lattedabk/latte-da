@@ -815,7 +815,7 @@ function App() {
                   ))}
                 </div>
               </div>
-              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-28 md:hidden" />
+              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-40 md:hidden" />
             </motion.div>
 
             {/* Contact */}
