@@ -164,7 +164,7 @@ function App() {
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
               >
-                the latte da way
+                about us
               </button>
 
               {/* Now Hiring Badge */}
@@ -246,7 +246,7 @@ function App() {
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
                 type="button"
               >
-                the latte da way
+                about us
               </button>
               <button
                 onClick={() => scrollToSection('hiring')}
@@ -367,7 +367,7 @@ function App() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      the latte da way
+                      about us
                     </motion.button>
                   </div>
                 </motion.div>
