@@ -230,6 +230,7 @@ function App() {
               <button
                 onClick={() => scrollToSection('home')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
                 home
@@ -237,6 +238,7 @@ function App() {
               <button
                 onClick={() => scrollToSection('menu')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
                 menu
@@ -244,6 +246,7 @@ function App() {
               <button
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
                 about us
@@ -251,6 +254,7 @@ function App() {
               <button
                 onClick={() => scrollToSection('hiring')}
                 className="block w-full text-left bg-latte-jade text-white px-4 py-3 rounded-full font-medium hover:bg-opacity-90 active:bg-opacity-80 transition-all duration-200 mt-2 cursor-pointer"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
                 now hiring
