@@ -888,9 +888,9 @@ function App() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={footerInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="hidden lg:flex items-center justify-center"
+              className="flex items-center justify-center"
             >
-              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-64" />
+              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-40 md:w-64" />
             </motion.div>
           </div>
 
