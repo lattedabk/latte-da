@@ -794,24 +794,28 @@ function App() {
               <p className="text-gray-700 text-sm mt-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>find us. bay ridge, brooklyn. off 3rd avenue. big windows. come say hi.</p>
             </motion.div>
 
-            {/* Hours */}
+            {/* Hours + Coffee Splash on Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex items-start gap-4"
             >
-              <h3 className="font-bold text-latte-blue mb-4 flex items-center gap-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                <Clock className="w-5 h-5" />
-                hours
-              </h3>
-              <div className="space-y-2">
-                {hours.map((schedule) => (
-                  <div key={schedule.day} className="text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                    <span className="text-gray-700 font-medium">{schedule.day}</span>
-                    <span className="text-gray-600 block">{schedule.time}</span>
-                  </div>
-                ))}
+              <div>
+                <h3 className="font-bold text-latte-blue mb-4 flex items-center gap-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  <Clock className="w-5 h-5" />
+                  hours
+                </h3>
+                <div className="space-y-2">
+                  {hours.map((schedule) => (
+                    <div key={schedule.day} className="text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                      <span className="text-gray-700 font-medium">{schedule.day}</span>
+                      <span className="text-gray-600 block">{schedule.time}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-28 md:hidden" />
             </motion.div>
 
             {/* Contact */}
@@ -887,14 +891,14 @@ function App() {
               </p>
             </motion.div>
 
-            {/* Coffee Splash Image */}
+            {/* Coffee Splash Image - Desktop only */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={footerInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-center justify-center"
+              className="hidden md:flex items-center justify-center"
             >
-              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-40 md:w-64" />
+              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-64" />
             </motion.div>
           </div>
 
