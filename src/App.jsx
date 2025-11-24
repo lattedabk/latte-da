@@ -196,6 +196,13 @@ function App() {
               >
                 about us
               </button>
+              <button
+                onClick={() => scrollToSection('partners')}
+                className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
+              >
+                partners
+              </button>
 
               {/* Now Hiring Badge */}
               <motion.button
@@ -280,6 +287,14 @@ function App() {
                 type="button"
               >
                 about us
+              </button>
+              <button
+                onClick={() => scrollToSection('partners')}
+                className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
+                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
+                type="button"
+              >
+                partners
               </button>
               <button
                 onClick={() => scrollToSection('hiring')}
@@ -654,7 +669,7 @@ function App() {
         </section>
 
         {/* Devocion Partnership Section */}
-        <section className="py-20 bg-black">
+        <section id="partners" className="scroll-mt-24 py-20 bg-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="max-w-6xl mx-auto"
