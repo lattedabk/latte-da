@@ -884,15 +884,6 @@ function App() {
                 >
                   all the hits
                 </motion.h2>
-                <motion.p
-                  className="text-lg text-gray-600 max-w-2xl mx-auto"
-                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={menuInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                >
-                  carefully crafted beverages and fresh bites, made with love and the finest ingredients
-                </motion.p>
                 <motion.div
                   className="w-24 h-1 bg-latte-jade mx-auto rounded-full mt-4"
                   initial={{ width: 0 }}
