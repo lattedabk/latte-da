@@ -1246,7 +1246,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex items-center justify-start md:justify-center lg:-mt-24 lg:-ml-20"
+              className="flex items-center justify-start md:justify-center -mt-12 md:mt-0 lg:-mt-24 lg:-ml-20"
             >
               <video
                 autoPlay
