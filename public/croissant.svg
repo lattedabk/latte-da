@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Main croissant body -->
+  <path d="M30 70 C 40 45, 70 35, 100 40 C 130 35, 160 45, 170 70 C 160 85, 130 90, 100 85 C 70 90, 40 85, 30 70 Z"/>
+
+  <!-- Left horn curl -->
+  <path d="M30 70 C 20 65, 10 55, 15 45 C 20 35, 35 40, 40 50"/>
+
+  <!-- Right horn curl -->
+  <path d="M170 70 C 180 65, 190 55, 185 45 C 180 35, 165 40, 160 50"/>
+
+  <!-- Inner layer lines -->
+  <path d="M45 65 C 60 55, 85 50, 100 52 C 115 50, 140 55, 155 65"/>
+  <path d="M55 72 C 70 62, 90 58, 100 60 C 110 58, 130 62, 145 72"/>
+
+  <!-- Surface texture lines -->
+  <path d="M65 48 C 70 52, 75 50, 80 48"/>
+  <path d="M95 45 C 100 49, 105 47, 110 45"/>
+  <path d="M120 48 C 125 52, 130 50, 135 48"/>
+</svg>

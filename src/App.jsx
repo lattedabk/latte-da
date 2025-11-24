@@ -51,7 +51,7 @@ function App() {
 
   const menuCategories = {
     espresso: {
-      title: 'espresso drinks',
+      title: 'espresso',
       items: [
         { name: 'espresso', price: '3.50' },
         { name: 'americano', price: '4.00' },
@@ -65,25 +65,55 @@ function App() {
       ]
     },
     coffee: {
-      title: 'coffee',
+      title: 'iced iced baby',
       items: [
-        { name: 'drip coffee', price: '3.00' },
-        { name: 'pour over', price: '5.00' },
+        { name: 'iced latte', price: '5.50' },
+        { name: 'iced macchiato', price: '5.00' },
         { name: 'cold brew', price: '4.50' },
-        { name: 'yama cold brew', price: '5.00' },
+        { name: 'espresso tonic', price: '6.00' },
+        { name: 'coconut espresso', price: '6.00' },
+        { name: 'coconut matcha', price: '6.50' },
+        { name: 'shaken espresso', price: '5.50' },
       ]
     },
     specialty: {
       title: 'specialty drinks',
       items: [
-        { name: 'matcha latte', price: '6.00' },
-        { name: 'chai latte', price: '5.50' },
-        { name: 'golden milk', price: '6.00' },
-        { name: 'hot chocolate', price: '5.00' },
-        { name: 'seasonal special', price: '6.50' },
-        { name: 'iced matcha', price: '6.50' },
-        { name: 'lavender latte', price: '6.00' },
+        { name: 'spanish latte', price: '6.00' },
+        { name: 'brown sugar shaken espresso', price: '6.00' },
+        { name: 'black raspberry chip latte', price: '6.50' },
+        { name: 'strawberry matcha', price: '6.50' },
+        { name: 'honey almond shaken espresso', price: '6.00' },
         { name: 'maple cinnamon latte', price: '6.00' },
+        { name: 'caramel sea salt latte', price: '6.00' },
+      ]
+    },
+    notespresso: {
+      title: 'not espresso',
+      items: [
+        { name: 'matcha latte', price: '6.00' },
+        { name: 'matcha lemonade', price: '6.00' },
+        { name: 'lavender matcha', price: '6.50' },
+        { name: 'chai latte', price: '5.50' },
+        { name: 'london fog', price: '5.50' },
+      ]
+    },
+    nocaffeine: {
+      title: 'no caffeine',
+      items: [
+        { name: 'hot chocolate', price: '5.00' },
+        { name: 'steamer', price: '4.50' },
+        { name: 'tea', price: '4.00' },
+        { name: 'decaf drip', price: '3.50' },
+      ]
+    },
+    tea: {
+      title: 'tea',
+      items: [
+        { name: 'chamomile', price: '4.00' },
+        { name: 'earl grey', price: '4.00' },
+        { name: 'white peach', price: '4.00' },
+        { name: 'chai', price: '4.00' },
       ]
     },
     food: {
@@ -296,7 +326,7 @@ function App() {
       {/* Main Content */}
       <main>
         {/* Hero Section - Keeping the current one as requested */}
-        <section id="home" className="scroll-mt-24 min-h-screen relative overflow-hidden bg-gradient-to-br from-latte-light to-white">
+        <section id="home" className="scroll-mt-24 min-h-screen relative overflow-hidden" style={{ backgroundColor: '#FDF6E3' }}>
           {/* Lime Wash Texture Overlay */}
           <div
             className="absolute inset-0 w-full h-full pointer-events-none opacity-40"
@@ -426,7 +456,7 @@ function App() {
         </section>
 
         {/* About Section - "The Latte Da Way" from latte-da-opus */}
-        <section id="about" className="scroll-mt-24 py-20 bg-latte-cream relative overflow-visible" ref={aboutRef}>
+        <section id="about" className="scroll-mt-24 py-20 relative overflow-visible" style={{ backgroundColor: '#FDF6E3' }} ref={aboutRef}>
           {/* Cappuccino Foam Top Border - extends into hero section above */}
           <div className="absolute -top-24 md:-top-32 left-0 w-full overflow-visible leading-none z-50 pointer-events-none">
             <svg
@@ -437,11 +467,11 @@ function App() {
             >
               <defs>
                 <linearGradient id="foamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="35%" stopColor="#f4ebe5" />
-                  <stop offset="60%" stopColor="#e6dcd5" />
-                  <stop offset="70%" stopColor="#d9cec8" />
-                  <stop offset="100%" stopColor="#d9cec8" />
+                  <stop offset="0%" stopColor="#FDF6E3" />
+                  <stop offset="35%" stopColor="#FDF6E3" />
+                  <stop offset="60%" stopColor="#FDF6E3" />
+                  <stop offset="70%" stopColor="#FDF6E3" />
+                  <stop offset="100%" stopColor="#FDF6E3" />
                 </linearGradient>
               </defs>
 
@@ -450,6 +480,88 @@ function App() {
                 d="M-50 150 C 40 30 230 90 360 65 C 520 40 700 120 860 55 C 1040 -10 1220 95 1380 55 C 1500 15 1650 90 1720 45 L 1720 260 L -50 260 Z"
                 fill="url(#foamGradient)"
               />
+
+              {/* Large foam bubbles - back layer */}
+              <circle cx="50" cy="120" r="35" fill="#fff" opacity="0.3" />
+              <circle cx="180" cy="100" r="40" fill="#fff" opacity="0.3" />
+              <circle cx="350" cy="110" r="38" fill="#fff" opacity="0.3" />
+              <circle cx="520" cy="95" r="42" fill="#fff" opacity="0.3" />
+              <circle cx="700" cy="105" r="36" fill="#fff" opacity="0.3" />
+              <circle cx="880" cy="90" r="44" fill="#fff" opacity="0.3" />
+              <circle cx="1050" cy="100" r="38" fill="#fff" opacity="0.3" />
+              <circle cx="1220" cy="95" r="40" fill="#fff" opacity="0.3" />
+              <circle cx="1400" cy="105" r="35" fill="#fff" opacity="0.3" />
+              <circle cx="1580" cy="95" r="42" fill="#fff" opacity="0.3" />
+
+              {/* Medium foam bubbles - middle layer */}
+              <circle cx="80" cy="85" r="22" fill="#fff" opacity="0.5" />
+              <circle cx="140" cy="100" r="18" fill="#fff" opacity="0.5" />
+              <circle cx="220" cy="75" r="25" fill="#fff" opacity="0.5" />
+              <circle cx="300" cy="90" r="20" fill="#fff" opacity="0.5" />
+              <circle cx="380" cy="80" r="23" fill="#fff" opacity="0.5" />
+              <circle cx="460" cy="95" r="19" fill="#fff" opacity="0.5" />
+              <circle cx="540" cy="70" r="26" fill="#fff" opacity="0.5" />
+              <circle cx="620" cy="85" r="21" fill="#fff" opacity="0.5" />
+              <circle cx="700" cy="75" r="24" fill="#fff" opacity="0.5" />
+              <circle cx="780" cy="90" r="18" fill="#fff" opacity="0.5" />
+              <circle cx="860" cy="65" r="27" fill="#fff" opacity="0.5" />
+              <circle cx="940" cy="80" r="22" fill="#fff" opacity="0.5" />
+              <circle cx="1020" cy="70" r="25" fill="#fff" opacity="0.5" />
+              <circle cx="1100" cy="85" r="20" fill="#fff" opacity="0.5" />
+              <circle cx="1180" cy="75" r="23" fill="#fff" opacity="0.5" />
+              <circle cx="1260" cy="90" r="19" fill="#fff" opacity="0.5" />
+              <circle cx="1340" cy="70" r="26" fill="#fff" opacity="0.5" />
+              <circle cx="1420" cy="85" r="21" fill="#fff" opacity="0.5" />
+              <circle cx="1500" cy="65" r="28" fill="#fff" opacity="0.5" />
+              <circle cx="1580" cy="80" r="22" fill="#fff" opacity="0.5" />
+              <circle cx="1660" cy="70" r="20" fill="#fff" opacity="0.5" />
+
+              {/* Small foam bubbles - front layer */}
+              <circle cx="60" cy="70" r="10" fill="#fff" opacity="0.7" />
+              <circle cx="110" cy="80" r="8" fill="#fff" opacity="0.7" />
+              <circle cx="160" cy="65" r="12" fill="#fff" opacity="0.7" />
+              <circle cx="240" cy="75" r="9" fill="#fff" opacity="0.7" />
+              <circle cx="290" cy="60" r="11" fill="#fff" opacity="0.7" />
+              <circle cx="350" cy="70" r="8" fill="#fff" opacity="0.7" />
+              <circle cx="420" cy="65" r="13" fill="#fff" opacity="0.7" />
+              <circle cx="490" cy="75" r="10" fill="#fff" opacity="0.7" />
+              <circle cx="560" cy="60" r="9" fill="#fff" opacity="0.7" />
+              <circle cx="630" cy="70" r="12" fill="#fff" opacity="0.7" />
+              <circle cx="710" cy="55" r="11" fill="#fff" opacity="0.7" />
+              <circle cx="790" cy="65" r="8" fill="#fff" opacity="0.7" />
+              <circle cx="870" cy="55" r="14" fill="#fff" opacity="0.7" />
+              <circle cx="950" cy="65" r="10" fill="#fff" opacity="0.7" />
+              <circle cx="1030" cy="55" r="12" fill="#fff" opacity="0.7" />
+              <circle cx="1110" cy="70" r="9" fill="#fff" opacity="0.7" />
+              <circle cx="1190" cy="60" r="11" fill="#fff" opacity="0.7" />
+              <circle cx="1270" cy="70" r="8" fill="#fff" opacity="0.7" />
+              <circle cx="1350" cy="55" r="13" fill="#fff" opacity="0.7" />
+              <circle cx="1430" cy="65" r="10" fill="#fff" opacity="0.7" />
+              <circle cx="1510" cy="55" r="12" fill="#fff" opacity="0.7" />
+              <circle cx="1590" cy="65" r="9" fill="#fff" opacity="0.7" />
+              <circle cx="1670" cy="60" r="11" fill="#fff" opacity="0.7" />
+
+              {/* Tiny bubbles - detail layer */}
+              <circle cx="95" cy="95" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="175" cy="88" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="265" cy="82" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="335" cy="92" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="445" cy="85" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="515" cy="90" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="595" cy="78" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="675" cy="88" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="755" cy="80" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="835" cy="75" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="915" cy="88" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="995" cy="82" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="1075" cy="78" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="1155" cy="85" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="1235" cy="80" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="1315" cy="88" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="1395" cy="75" r="5" fill="#fff" opacity="0.8" />
+              <circle cx="1475" cy="82" r="4" fill="#fff" opacity="0.8" />
+              <circle cx="1555" cy="78" r="6" fill="#fff" opacity="0.8" />
+              <circle cx="1635" cy="85" r="5" fill="#fff" opacity="0.8" />
 
             </svg>
           </div>
@@ -472,15 +584,13 @@ function App() {
               {/* Section Header */}
               <div className="text-left mb-16 max-w-3xl mx-auto">
                 <motion.h2
-                  className="text-4xl md:text-5xl text-latte-blue mb-4"
+                  className="text-4xl md:text-5xl text-latte-jade mb-4"
                   style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  fresh coffee.<br />
-                  that's it.<br />
-                  that's the thing.
+                  your coffee's still jetlagged.
                 </motion.h2>
                 <motion.div
                   className="w-24 h-1 bg-latte-jade rounded-full"
@@ -529,14 +639,60 @@ function App() {
 
                 {/* The Short Version */}
                 <motion.div
-                  className="text-left space-y-2"
+                  className="text-left space-y-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <p className="text-lg text-gray-700 mb-4">we buy from farmers we know, who roast small batches, often.</p>
-                  <p className="text-lg text-gray-700 mb-4">we don't hoard beans in some warehouse in jersey.</p>
-                  <p className="text-2xl text-latte-jade mb-4">we make good coffee.</p>
+                  <p className="text-lg text-gray-700">everything else? same story. high quality. fresh daily.</p>
+                  <p className="text-lg text-gray-700">we don't cut corners.  we don't hoard beans in some warehouse in jersey.</p>
+                  <p className="text-2xl text-latte-jade">just good stuff, made right.</p>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Devocion Partnership Section */}
+        <section className="py-20 bg-black">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              className="max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+            >
+              {/* Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl text-white mb-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>
+                  latte da & devoción
+                </h2>
+              </div>
+
+              {/* Images Grid */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <motion.div
+                  className="rounded-2xl overflow-hidden shadow-xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/devocion-black.png"
+                    alt="Proudly Serving Devoción"
+                    className="w-full h-[500px] md:h-[800px] object-contain"
+                  />
+                </motion.div>
+                <motion.div
+                  className="rounded-2xl overflow-hidden shadow-xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/devocion-timeline.png"
+                    alt="Devoción Green-to-Cup Timeline"
+                    className="w-full h-[400px] md:h-[650px] object-contain"
+                  />
                 </motion.div>
               </div>
             </motion.div>
@@ -544,10 +700,170 @@ function App() {
         </section>
 
         {/* Menu Section - Switchable menu from latte-da-opus */}
-        <section id="menu" className="scroll-mt-24 py-20 relative overflow-hidden" style={{ backgroundColor: '#FDF6E3' }} ref={menuRef}>
+        <section id="menu" className="scroll-mt-24 py-20 relative overflow-visible" style={{ backgroundColor: '#FDF6E3' }} ref={menuRef}>
+          {/* Cappuccino Foam Top Border */}
+          <div className="absolute -top-24 md:-top-32 left-0 w-full overflow-visible leading-none z-50 pointer-events-none">
+            <svg
+              className="relative block w-full h-32 md:h-48"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-50 0 1750 220"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient id="menuFoamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" />
+                  <stop offset="40%" stopColor="#f5f0e8" />
+                  <stop offset="100%" stopColor="#FDF6E3" />
+                </linearGradient>
+              </defs>
+
+              {/* Organic froth body */}
+              <path
+                d="M-50 150 C 40 30 230 90 360 65 C 520 40 700 120 860 55 C 1040 -10 1220 95 1380 55 C 1500 15 1650 90 1720 45 L 1720 260 L -50 260 Z"
+                fill="url(#menuFoamGradient)"
+              />
+
+              {/* Extra large foam bubbles - back layer */}
+              <circle cx="100" cy="140" r="50" fill="#fff" opacity="0.4" />
+              <circle cx="300" cy="130" r="55" fill="#fff" opacity="0.35" />
+              <circle cx="500" cy="125" r="52" fill="#fff" opacity="0.4" />
+              <circle cx="750" cy="135" r="58" fill="#fff" opacity="0.35" />
+              <circle cx="950" cy="120" r="54" fill="#fff" opacity="0.4" />
+              <circle cx="1150" cy="130" r="50" fill="#fff" opacity="0.35" />
+              <circle cx="1350" cy="125" r="56" fill="#fff" opacity="0.4" />
+              <circle cx="1550" cy="130" r="52" fill="#fff" opacity="0.35" />
+
+              {/* Large foam bubbles */}
+              <circle cx="50" cy="110" r="40" fill="#fff" opacity="0.5" />
+              <circle cx="180" cy="95" r="45" fill="#fff" opacity="0.5" />
+              <circle cx="350" cy="100" r="42" fill="#fff" opacity="0.5" />
+              <circle cx="520" cy="90" r="48" fill="#fff" opacity="0.5" />
+              <circle cx="700" cy="95" r="44" fill="#fff" opacity="0.5" />
+              <circle cx="880" cy="85" r="50" fill="#fff" opacity="0.5" />
+              <circle cx="1050" cy="95" r="46" fill="#fff" opacity="0.5" />
+              <circle cx="1220" cy="90" r="48" fill="#fff" opacity="0.5" />
+              <circle cx="1400" cy="95" r="42" fill="#fff" opacity="0.5" />
+              <circle cx="1580" cy="88" r="50" fill="#fff" opacity="0.5" />
+
+              {/* Medium foam bubbles */}
+              <circle cx="80" cy="75" r="28" fill="#fff" opacity="0.65" />
+              <circle cx="140" cy="90" r="22" fill="#fff" opacity="0.6" />
+              <circle cx="220" cy="70" r="30" fill="#fff" opacity="0.65" />
+              <circle cx="300" cy="85" r="24" fill="#fff" opacity="0.6" />
+              <circle cx="380" cy="72" r="28" fill="#fff" opacity="0.65" />
+              <circle cx="460" cy="88" r="25" fill="#fff" opacity="0.6" />
+              <circle cx="540" cy="65" r="32" fill="#fff" opacity="0.65" />
+              <circle cx="620" cy="80" r="26" fill="#fff" opacity="0.6" />
+              <circle cx="700" cy="68" r="30" fill="#fff" opacity="0.65" />
+              <circle cx="780" cy="82" r="24" fill="#fff" opacity="0.6" />
+              <circle cx="860" cy="60" r="34" fill="#fff" opacity="0.65" />
+              <circle cx="940" cy="75" r="28" fill="#fff" opacity="0.6" />
+              <circle cx="1020" cy="65" r="32" fill="#fff" opacity="0.65" />
+              <circle cx="1100" cy="80" r="26" fill="#fff" opacity="0.6" />
+              <circle cx="1180" cy="68" r="30" fill="#fff" opacity="0.65" />
+              <circle cx="1260" cy="82" r="24" fill="#fff" opacity="0.6" />
+              <circle cx="1340" cy="62" r="32" fill="#fff" opacity="0.65" />
+              <circle cx="1420" cy="78" r="28" fill="#fff" opacity="0.6" />
+              <circle cx="1500" cy="58" r="35" fill="#fff" opacity="0.65" />
+              <circle cx="1580" cy="72" r="28" fill="#fff" opacity="0.6" />
+              <circle cx="1660" cy="65" r="26" fill="#fff" opacity="0.65" />
+
+              {/* Small foam bubbles */}
+              <circle cx="60" cy="60" r="14" fill="#fff" opacity="0.8" />
+              <circle cx="110" cy="70" r="11" fill="#fff" opacity="0.75" />
+              <circle cx="160" cy="55" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="210" cy="65" r="12" fill="#fff" opacity="0.75" />
+              <circle cx="270" cy="52" r="15" fill="#fff" opacity="0.8" />
+              <circle cx="330" cy="62" r="13" fill="#fff" opacity="0.75" />
+              <circle cx="390" cy="55" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="450" cy="65" r="12" fill="#fff" opacity="0.75" />
+              <circle cx="510" cy="50" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="570" cy="60" r="14" fill="#fff" opacity="0.75" />
+              <circle cx="630" cy="52" r="15" fill="#fff" opacity="0.8" />
+              <circle cx="690" cy="58" r="13" fill="#fff" opacity="0.75" />
+              <circle cx="750" cy="48" r="18" fill="#fff" opacity="0.8" />
+              <circle cx="810" cy="58" r="14" fill="#fff" opacity="0.75" />
+              <circle cx="870" cy="45" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="930" cy="55" r="15" fill="#fff" opacity="0.75" />
+              <circle cx="990" cy="48" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="1050" cy="58" r="13" fill="#fff" opacity="0.75" />
+              <circle cx="1110" cy="52" r="15" fill="#fff" opacity="0.8" />
+              <circle cx="1170" cy="60" r="14" fill="#fff" opacity="0.75" />
+              <circle cx="1230" cy="50" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="1290" cy="58" r="13" fill="#fff" opacity="0.75" />
+              <circle cx="1350" cy="48" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="1410" cy="56" r="14" fill="#fff" opacity="0.75" />
+              <circle cx="1470" cy="45" r="18" fill="#fff" opacity="0.8" />
+              <circle cx="1530" cy="55" r="15" fill="#fff" opacity="0.75" />
+              <circle cx="1590" cy="50" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="1650" cy="58" r="13" fill="#fff" opacity="0.75" />
+
+              {/* Tiny bubbles - detail layer */}
+              <circle cx="75" cy="50" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="135" cy="55" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="195" cy="48" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="255" cy="52" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="315" cy="45" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="375" cy="50" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="435" cy="48" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="495" cy="42" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="555" cy="45" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="615" cy="50" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="675" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="735" cy="48" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="795" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="855" cy="45" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="915" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="975" cy="48" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="1035" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1095" cy="45" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="1155" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="1215" cy="48" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="1275" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1335" cy="45" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="1395" cy="38" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="1455" cy="44" r="6" fill="#fff" opacity="0.85" />
+              <circle cx="1515" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1575" cy="46" r="5" fill="#fff" opacity="0.85" />
+              <circle cx="1635" cy="42" r="8" fill="#fff" opacity="0.9" />
+            </svg>
+          </div>
+
           {/* Background decoration */}
-          <div className="absolute top-10 right-10 w-96 h-96 opacity-5 pointer-events-none">
+          <div className="absolute top-10 right-10 w-96 h-96 opacity-30 pointer-events-none">
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
+          </div>
+          {/* Coffee Splash - Desktop */}
+          <div className="absolute top-1/3 left-10 w-[500px] h-[500px] pointer-events-none hidden lg:block">
+            <motion.img
+              src="/coffee-splash.png"
+              alt=""
+              className="w-full h-full object-contain"
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          </div>
+          {/* Coffee Splash - Mobile */}
+          <div className="lg:hidden flex justify-center mb-4 mt-8">
+            <motion.img
+              src="/coffee-splash.png"
+              alt=""
+              className="w-40 h-40 object-contain"
+              animate={{
+                y: [0, -15, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -647,10 +963,13 @@ function App() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <p className="text-sm text-gray-600 text-center" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                    {activeMenuCategory === 'espresso' && 'all espresso drinks available with oat or almond milk'}
-                    {activeMenuCategory === 'coffee' && 'we rotate our single origin beans weekly - ask your barista for current selection'}
-                    {activeMenuCategory === 'specialty' && 'all drinks can be customized to your preference - just ask!'}
-                    {activeMenuCategory === 'food' && 'fresh items delivered daily from local brooklyn bakeries'}
+                    {activeMenuCategory === 'espresso' && 'your choice of milk and flavors. ask barista for selection!'}
+                    {activeMenuCategory === 'coffee' && 'your choice of milk and flavors. ask barista for selection!'}
+                    {activeMenuCategory === 'specialty' && 'your choice of milk and flavors. ask barista for selection!'}
+                    {activeMenuCategory === 'notespresso' && 'your choice of milk and flavors. ask barista for selection!'}
+                    {activeMenuCategory === 'nocaffeine' && 'your choice of tea, milk, and flavors. ask your barista for selections!'}
+                    {activeMenuCategory === 'tea' && 'your choice of tea, milk, and flavors. ask your barista for selections!'}
+                    {activeMenuCategory === 'food' && 'fresh daily. pastry happy hour at 3 pm on weekdays and 4pm on weekends'}
                   </p>
                 </motion.div>
               </motion.div>
@@ -671,33 +990,107 @@ function App() {
         {/* Hiring Section - From latte-da-codex */}
         <motion.section
           id="hiring"
-          className="scroll-mt-24 bg-latte-cream px-6 py-24"
+          className="scroll-mt-24 px-6 py-24 relative overflow-visible" style={{ backgroundColor: '#FDF6E3' }}
           ref={hiringRef}
           initial={{ opacity: 0, y: 60 }}
           animate={hiringInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Cappuccino Foam Top Border */}
+          <div className="absolute -top-24 md:-top-32 left-0 w-full overflow-visible leading-none z-50 pointer-events-none">
+            <svg
+              className="relative block w-full h-32 md:h-48"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-50 0 1750 220"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient id="hiringFoamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" />
+                  <stop offset="40%" stopColor="#f5f0e8" />
+                  <stop offset="100%" stopColor="#FDF6E3" />
+                </linearGradient>
+              </defs>
+
+              {/* Organic froth body */}
+              <path
+                d="M-50 150 C 40 30 230 90 360 65 C 520 40 700 120 860 55 C 1040 -10 1220 95 1380 55 C 1500 15 1650 90 1720 45 L 1720 260 L -50 260 Z"
+                fill="url(#hiringFoamGradient)"
+              />
+
+              {/* Large foam bubbles */}
+              <circle cx="100" cy="140" r="50" fill="#fff" opacity="0.4" />
+              <circle cx="300" cy="130" r="55" fill="#fff" opacity="0.35" />
+              <circle cx="500" cy="125" r="52" fill="#fff" opacity="0.4" />
+              <circle cx="750" cy="135" r="58" fill="#fff" opacity="0.35" />
+              <circle cx="950" cy="120" r="54" fill="#fff" opacity="0.4" />
+              <circle cx="1150" cy="130" r="50" fill="#fff" opacity="0.35" />
+              <circle cx="1350" cy="125" r="56" fill="#fff" opacity="0.4" />
+              <circle cx="1550" cy="130" r="52" fill="#fff" opacity="0.35" />
+
+              {/* Medium foam bubbles */}
+              <circle cx="80" cy="85" r="28" fill="#fff" opacity="0.6" />
+              <circle cx="220" cy="75" r="30" fill="#fff" opacity="0.6" />
+              <circle cx="380" cy="80" r="28" fill="#fff" opacity="0.6" />
+              <circle cx="540" cy="70" r="32" fill="#fff" opacity="0.6" />
+              <circle cx="700" cy="75" r="30" fill="#fff" opacity="0.6" />
+              <circle cx="860" cy="65" r="34" fill="#fff" opacity="0.6" />
+              <circle cx="1020" cy="70" r="32" fill="#fff" opacity="0.6" />
+              <circle cx="1180" cy="75" r="30" fill="#fff" opacity="0.6" />
+              <circle cx="1340" cy="70" r="32" fill="#fff" opacity="0.6" />
+              <circle cx="1500" cy="65" r="35" fill="#fff" opacity="0.6" />
+
+              {/* Small foam bubbles */}
+              <circle cx="60" cy="65" r="14" fill="#fff" opacity="0.8" />
+              <circle cx="160" cy="60" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="290" cy="55" r="15" fill="#fff" opacity="0.8" />
+              <circle cx="420" cy="60" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="560" cy="55" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="710" cy="50" r="18" fill="#fff" opacity="0.8" />
+              <circle cx="870" cy="50" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="1030" cy="55" r="16" fill="#fff" opacity="0.8" />
+              <circle cx="1190" cy="55" r="15" fill="#fff" opacity="0.8" />
+              <circle cx="1350" cy="50" r="17" fill="#fff" opacity="0.8" />
+              <circle cx="1510" cy="50" r="16" fill="#fff" opacity="0.8" />
+
+              {/* Tiny bubbles */}
+              <circle cx="95" cy="50" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="195" cy="48" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="315" cy="45" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="435" cy="48" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="555" cy="45" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="675" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="795" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="915" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="1035" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1155" cy="42" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="1275" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1395" cy="38" r="8" fill="#fff" opacity="0.9" />
+              <circle cx="1515" cy="40" r="7" fill="#fff" opacity="0.9" />
+              <circle cx="1635" cy="42" r="8" fill="#fff" opacity="0.9" />
+            </svg>
+          </div>
+          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
             <div className="space-y-6">
               {/* Section Header */}
               <div className="space-y-4">
                 <p className="text-xs tracking-[0.45em] text-latte-blue/70" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>careers</p>
-                <h2 className="text-3xl md:text-4xl font-semibold text-slate-900" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                <h2 className="text-3xl md:text-4xl font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   we're hiring experienced baristas who love great coffee.
                 </h2>
-                <p className="text-base text-slate-600 max-w-3xl" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                <p className="text-base text-latte-blue max-w-3xl" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   if you're passionate about coffee craft and creating memorable experiences, we want to meet you.
                 </p>
               </div>
               <ul className="space-y-3">
                 {hiringBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-3 text-sm text-slate-600" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                  <li key={benefit} className="flex items-center gap-3 text-sm text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                     <span className="h-2 w-2 rounded-full bg-latte-jade" />
                     {benefit}
                   </li>
                 ))}
               </ul>
-              <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-5 text-sm text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+              <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-5 text-sm text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                 send questions to{' '}
                 <a href="mailto:hello@lattedacafes.com" className="font-semibold text-latte-blue underline">
                   hello@lattedacafes.com
@@ -710,7 +1103,7 @@ function App() {
               onSubmit={(event) => event.preventDefault()}
             >
               <div className="grid gap-4">
-                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   name
                   <input
                     type="text"
@@ -720,7 +1113,7 @@ function App() {
                     style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                   />
                 </label>
-                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   email
                   <input
                     type="email"
@@ -731,12 +1124,12 @@ function App() {
                   />
                 </label>
                 <div className="text-sm">
-                  <p className="font-semibold text-slate-700 mb-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>position</p>
+                  <p className="font-semibold text-latte-blue mb-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>position</p>
                   <div className="rounded-2xl border border-latte-jade bg-latte-light/50 px-4 py-3">
                     <span className="text-latte-jade font-medium" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>barista position</span>
                   </div>
                 </div>
-                <label className="text-sm font-semibold text-slate-700" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
                   message
                   <textarea
                     rows={4}
@@ -791,7 +1184,7 @@ function App() {
                 className="h-10 mb-4"
               />
               <p className="text-gray-700 text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>we'll make you something good.</p>
-              <p className="text-gray-700 text-sm mt-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>find us. bay ridge, brooklyn. off 3rd avenue. big windows. come say hi.</p>
+              <p className="text-gray-700 text-sm mt-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>bay ridge, brooklyn. off 3rd avenue. big windows. come say hi.</p>
             </motion.div>
 
             {/* Hours + Coffee Splash on Mobile */}
@@ -815,8 +1208,7 @@ function App() {
                   ))}
                 </div>
               </div>
-              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-40 md:hidden" />
-            </motion.div>
+                          </motion.div>
 
             {/* Contact */}
             <motion.div
@@ -847,6 +1239,24 @@ function App() {
                   <span className="text-sm">280 86th st, brooklyn</span>
                 </div>
               </div>
+            </motion.div>
+
+            {/* Coffee Animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="flex items-center justify-center -mt-24 -ml-20"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-96 h-96 object-contain"
+              >
+                <source src="/coffee-animation.mp4" type="video/mp4" />
+              </video>
             </motion.div>
 
             {/* Connect */}
@@ -898,8 +1308,7 @@ function App() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="hidden md:flex items-center justify-center"
             >
-              <img src="/coffee-splash.png" alt="Coffee mascot" className="w-64" />
-            </motion.div>
+                          </motion.div>
           </div>
 
           {/* Bottom Bar */}
