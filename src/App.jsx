@@ -1246,14 +1246,14 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex items-center justify-center -mt-24 -ml-20"
+              className="flex items-center justify-center lg:-mt-24 lg:-ml-20"
             >
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-96 h-96 object-contain"
+                className="w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain"
               >
                 <source src="/coffee-animation.mp4" type="video/mp4" />
               </video>
