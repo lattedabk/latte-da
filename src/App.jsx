@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Menu, X, Facebook, Instagram, Mail, MapPin, Clock, Phone } from 'lucide-react'
 
@@ -40,6 +40,7 @@ function App() {
   const hiringInView = useInView(hiringRef, { once: true, amount: 0.2 })
   const footerRef = useRef(null)
   const footerInView = useInView(footerRef, { once: true, amount: 0.2 })
+  const videoRef = useRef(null)
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -48,6 +49,16 @@ function App() {
       setMobileMenuOpen(false)
     }
   }
+
+  // Ensure video plays on mobile when footer comes into view
+  useEffect(() => {
+    if (footerInView && videoRef.current) {
+      videoRef.current.play().catch(error => {
+        // Autoplay was prevented, which is fine - user can tap to play
+        console.log('Video autoplay prevented:', error)
+      })
+    }
+  }, [footerInView])
 
   const menuCategories = {
     espresso: {
@@ -1255,6 +1266,7 @@ function App() {
               className="flex items-center justify-start md:justify-center -mt-12 md:mt-0 lg:-mt-24 lg:-ml-20"
             >
               <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
