@@ -388,26 +388,6 @@ function App() {
                     </span>
                   </motion.div>
 
-                  {/* Bold, left-aligned headline */}
-                  <div className="relative inline-block">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-latte-jade leading-tight" style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>
-                      a small
-                      <br />
-                      <span className="text-latte-blue">ritual</span>
-                      <br />
-                      done right
-                    </h1>
-                    {/* Coffee Beans - Positioned after "A Small" */}
-                    <motion.img
-                      src="/coffee beans.svg"
-                      alt=""
-                      initial={{ opacity: 0, scale: 0, rotate: 0 }}
-                      animate={{ opacity: 0.3, scale: 1, rotate: 15 }}
-                      transition={{ duration: 1.5, delay: 0.8 }}
-                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 pointer-events-none"
-                    />
-                  </div>
-
                   {/* CTAs - Stacked vertically for visual interest */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <motion.button
@@ -466,16 +446,6 @@ function App() {
                     }}
                   />
                 </motion.div>
-
-                {/* Coffee Cup with Steam - Overlapping Element */}
-                <motion.img
-                  src="/coffee cup.svg"
-                  alt=""
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                  className="absolute bottom-10 right-10 w-24 h-24 md:w-32 md:h-32 pointer-events-none"
-                />
               </div>
             </div>
           </div>
@@ -1200,8 +1170,7 @@ function App() {
                 alt="Latte Da"
                 className="h-10 mb-4"
               />
-              <p className="text-gray-700 text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>we'll make you something good.</p>
-              <p className="text-gray-700 text-sm mt-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>bay ridge, brooklyn. off 3rd avenue. big windows. come say hi.</p>
+              <p className="text-gray-700 text-sm" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>bay ridge, brooklyn</p>
             </motion.div>
 
             {/* Hours + Coffee Splash on Mobile */}
@@ -1263,7 +1232,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex items-center justify-start md:justify-center -mt-12 md:mt-0 lg:-mt-24 lg:-ml-20"
+              className="flex items-center justify-center md:justify-start md:-mt-20 md:-ml-12"
             >
               <video
                 ref={videoRef}
@@ -1271,7 +1240,7 @@ function App() {
                 loop
                 muted
                 playsInline
-                className="w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain"
+                className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain"
               >
                 <source src="/coffee-animation.mp4" type="video/mp4" />
               </video>
