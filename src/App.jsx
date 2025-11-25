@@ -830,7 +830,7 @@ function App() {
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
           </div>
           {/* Coffee Splash - Desktop */}
-          <div className="absolute top-1/3 left-10 w-[500px] h-[500px] pointer-events-none hidden lg:block">
+          <div className="absolute top-1/3 left-10 w-[350px] h-[350px] pointer-events-none hidden lg:block">
             <motion.img
               src="/coffee-splash.png"
               alt=""
