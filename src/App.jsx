@@ -941,24 +941,6 @@ function App() {
                     </motion.div>
                   ))}
                 </div>
-
-                {/* Category-specific note */}
-                <motion.div
-                  className="mt-8 p-4 bg-latte-cream rounded-xl"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  <p className="text-sm text-gray-600 text-center" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                    {activeMenuCategory === 'espresso' && 'your choice of milk and flavors. ask barista for selection!'}
-                    {activeMenuCategory === 'coffee' && 'your choice of milk and flavors. ask barista for selection!'}
-                    {activeMenuCategory === 'specialty' && 'your choice of milk and flavors. ask barista for selection!'}
-                    {activeMenuCategory === 'notespresso' && 'your choice of milk and flavors. ask barista for selection!'}
-                    {activeMenuCategory === 'nocaffeine' && 'your choice of tea, milk, and flavors. ask your barista for selections!'}
-                    {activeMenuCategory === 'tea' && 'your choice of tea, milk, and flavors. ask your barista for selections!'}
-                    {activeMenuCategory === 'food' && 'fresh daily. pastry happy hour at 3 pm on weekdays and 4pm on weekends'}
-                  </p>
-                </motion.div>
               </motion.div>
 
               {/* Bottom decoration with coffee elements */}
@@ -1232,7 +1214,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex items-center justify-center md:justify-start md:-mt-20 md:-ml-12"
+              className="flex items-center justify-start -mt-12 -ml-4 md:-mt-20 md:-ml-12"
             >
               <video
                 ref={videoRef}
