@@ -388,6 +388,25 @@ function App() {
                     </span>
                   </motion.div>
 
+                  {/* Bold, left-aligned headline */}
+                  <div className="relative inline-block">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-latte-jade leading-tight font-bold">
+                      a small
+                      <br />
+                      <span className="text-latte-blue">ritual</span>
+                      <br />
+                      done right
+                    </h1>
+                    {/* Coffee Beans - Positioned after "A Small" */}
+                    <motion.img
+                      src="/coffee beans.svg"
+                      alt=""
+                      initial={{ opacity: 0, scale: 0, rotate: 0 }}
+                      animate={{ opacity: 0.3, scale: 1, rotate: 15 }}
+                      transition={{ duration: 1.5, delay: 0.8 }}
+                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 pointer-events-none"
+                    />
+                  </div>
                   {/* CTAs - Stacked vertically for visual interest */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <motion.button
@@ -580,8 +599,7 @@ function App() {
               {/* Section Header */}
               <div className="text-left mb-16 max-w-3xl mx-auto">
                 <motion.h2
-                  className="text-4xl md:text-5xl text-latte-jade mb-4"
-                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
+                  className="text-4xl md:text-5xl text-latte-jade mb-4 font-bold"
                   initial={{ opacity: 0, y: 20 }}
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -622,11 +640,11 @@ function App() {
                     transition={{ duration: 0.8, delay: 0.5 }}
                   >
                     <div className="text-left">
-                      <div className="text-6xl md:text-7xl text-latte-jade" style={{ fontWeight: 900 }}>10</div>
+                      <div className="text-6xl md:text-7xl text-latte-jade font-bold">10</div>
                       <div className="text-sm text-gray-600 mt-2">days, farm to cup</div>
                     </div>
                     <div className="text-left">
-                      <div className="text-6xl md:text-7xl text-black" style={{ fontWeight: 900 }}>180</div>
+                      <div className="text-6xl md:text-7xl text-black font-bold">180</div>
                       <div className="text-sm text-gray-600 mt-2">days, industry average</div>
                     </div>
                   </motion.div>
@@ -661,7 +679,7 @@ function App() {
             >
               {/* Header */}
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl text-white mb-4" style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}>
+                <h2 className="text-3xl md:text-4xl text-white mb-4 font-bold" style={{ fontFamily: 'Mezzogiorno' }}>
                   latte da & devoción
                 </h2>
               </div>
