@@ -388,25 +388,6 @@ function App() {
                     </span>
                   </motion.div>
 
-                  {/* Bold, left-aligned headline */}
-                  <div className="relative inline-block">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-latte-jade leading-tight font-bold">
-                      a small
-                      <br />
-                      <span className="text-latte-blue">ritual</span>
-                      <br />
-                      done right
-                    </h1>
-                    {/* Coffee Beans - Positioned after "A Small" */}
-                    <motion.img
-                      src="/coffee beans.svg"
-                      alt=""
-                      initial={{ opacity: 0, scale: 0, rotate: 0 }}
-                      animate={{ opacity: 0.3, scale: 1, rotate: 15 }}
-                      transition={{ duration: 1.5, delay: 0.8 }}
-                      className="absolute -right-12 md:-right-32 lg:-right-40 top-0 md:top-2 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20 pointer-events-none"
-                    />
-                  </div>
                   {/* CTAs - Stacked vertically for visual interest */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <motion.button
@@ -599,12 +580,13 @@ function App() {
               {/* Section Header */}
               <div className="text-left mb-16 max-w-3xl mx-auto">
                 <motion.h2
-                  className="text-4xl md:text-5xl text-latte-jade mb-4 font-bold"
+                  className="text-4xl md:text-5xl text-latte-jade mb-4"
+                  style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  your coffee's still jetlagged.
+                  a small ritual done right
                 </motion.h2>
                 <motion.div
                   className="w-24 h-1 bg-latte-jade rounded-full"
