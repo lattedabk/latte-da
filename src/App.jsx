@@ -146,17 +146,10 @@ function App() {
     label: menuCategories[key].title
   }))
 
-  const hiringBenefits = [
-    'creative studio-style workspace',
-    'collaborative team energy',
-    'training with head roaster & beverage leads',
-    'flexible scheduling & community events',
-  ]
 
   const hours = [
     { day: 'monday - friday', time: '7:00 am - 4:00 pm' },
-    { day: 'saturday', time: '8:00 am - 5:00 pm' },
-    { day: 'sunday', time: '8:00 am - 5:00 pm' },
+    { day: 'saturday & sunday', time: '8:00 am - 5:00 pm' },
   ]
 
   return (
@@ -187,13 +180,6 @@ function App() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection('home')}
-                className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
-                style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
-              >
-                home
-              </button>
-              <button
                 onClick={() => scrollToSection('menu')}
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
@@ -205,7 +191,7 @@ function App() {
                 className="text-gray-700 hover:text-latte-blue transition-colors duration-200"
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
               >
-                about us
+                about
               </button>
               <button
                 onClick={() => scrollToSection('partners')}
@@ -215,7 +201,7 @@ function App() {
                 partners
               </button>
 
-              {/* Now Hiring Badge */}
+              {/* Contact Button */}
               <motion.button
                 onClick={() => scrollToSection('hiring')}
                 className="bg-latte-jade text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200"
@@ -223,7 +209,7 @@ function App() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                now hiring
+                contact
               </motion.button>
 
               {/* Social Icons */}
@@ -238,7 +224,7 @@ function App() {
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/lattedacafes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-latte-blue transition-colors duration-200"
@@ -276,14 +262,6 @@ function App() {
               style={{ position: 'relative', zIndex: 9999 }}
             >
               <button
-                onClick={() => scrollToSection('home')}
-                className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
-                style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
-                type="button"
-              >
-                home
-              </button>
-              <button
                 onClick={() => scrollToSection('menu')}
                 className="block w-full text-left text-gray-700 hover:text-latte-blue active:text-latte-blue transition-colors duration-200 py-3 px-2 rounded hover:bg-latte-light cursor-pointer"
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
@@ -297,7 +275,7 @@ function App() {
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
-                about us
+                about
               </button>
               <button
                 onClick={() => scrollToSection('partners')}
@@ -313,7 +291,7 @@ function App() {
                 style={{ fontFamily: 'Mezzogiorno', fontWeight: 900 }}
                 type="button"
               >
-                now hiring
+                contact
               </button>
 
               {/* Mobile Social Icons */}
@@ -328,7 +306,7 @@ function App() {
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/lattedacafes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-latte-blue transition-colors duration-200"
@@ -956,7 +934,7 @@ function App() {
           </div>
         </section>
 
-        {/* Hiring Section - From latte-da-codex */}
+        {/* Contact Us Section */}
         <motion.section
           id="hiring"
           className="scroll-mt-24 px-6 py-24 relative overflow-visible" style={{ backgroundColor: '#FDF6E3' }}
@@ -1039,83 +1017,27 @@ function App() {
               <circle cx="1635" cy="42" r="8" fill="#fff" opacity="0.9" />
             </svg>
           </div>
-          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
-            <div className="space-y-6">
-              {/* Section Header */}
-              <div className="space-y-4">
-                <p className="text-xs tracking-[0.45em] text-latte-blue/70" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>careers</p>
-                <h2 className="text-3xl md:text-4xl font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                  we're hiring experienced baristas who love great coffee.
-                </h2>
-                <p className="text-base text-latte-blue max-w-3xl" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                  if you're passionate about coffee craft and creating memorable experiences, we want to meet you.
-                </p>
-              </div>
-              <ul className="space-y-3">
-                {hiringBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-3 text-sm text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                    <span className="h-2 w-2 rounded-full bg-latte-jade" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-              <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-5 text-sm text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                send questions to{' '}
-                <a href="mailto:hello@lattedacafes.com" className="font-semibold text-latte-blue underline">
-                  hello@lattedacafes.com
-                </a>{' '}
-                or drop your info below. we review applications weekly.
-              </div>
+          <div className="mx-auto max-w-4xl text-center">
+            {/* Section Header */}
+            <div className="space-y-6 mb-12">
+              <h2 className="text-4xl md:text-5xl font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
+                get in touch
+              </h2>
             </div>
-            <form
-              className="rounded-[32px] border border-latte-blue/10 bg-white p-6 shadow-2xl shadow-latte-blue/10"
-              onSubmit={(event) => event.preventDefault()}
-            >
-              <div className="grid gap-4">
-                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                  name
-                  <input
-                    type="text"
-                    required
-                    placeholder="full name"
-                    className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
-                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
-                  />
-                </label>
-                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                  email
-                  <input
-                    type="email"
-                    required
-                    placeholder="name@email.com"
-                    className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
-                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
-                  />
-                </label>
-                <div className="text-sm">
-                  <p className="font-semibold text-latte-blue mb-2" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>position</p>
-                  <div className="rounded-2xl border border-latte-jade bg-latte-light/50 px-4 py-3">
-                    <span className="text-latte-jade font-medium" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>barista position</span>
-                  </div>
-                </div>
-                <label className="text-sm font-semibold text-latte-blue" style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}>
-                  message
-                  <textarea
-                    rows={4}
-                    placeholder="tell us about your vibe, experience, and availability..."
-                    className="mt-2 w-full rounded-2xl border border-slate-200 bg-latte-light px-4 py-3 text-sm focus:border-latte-blue focus:outline-none"
-                    style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
-                  />
-                </label>
-                <button
-                  type="submit"
-                  className="rounded-full bg-latte-jade px-6 py-3 text-sm font-semibold tracking-[0.4em] text-white transition hover:-translate-y-0.5"
+
+            {/* Contact Information Card */}
+            <div className="rounded-3xl border border-latte-blue/10 bg-white/80 p-8 md:p-12 shadow-xl">
+              <div className="flex flex-col items-center space-y-6">
+                <Mail className="w-16 h-16 text-latte-jade" />
+                <a
+                  href="mailto:hello@lattedacafes.com"
+                  className="text-2xl md:text-3xl font-semibold text-latte-blue hover:text-latte-jade transition-colors"
                   style={{ fontFamily: 'Mezzogiorno', fontWeight: 700 }}
                 >
-                  submit
-                </button>
+                  hello@lattedacafes.com
+                </a>
               </div>
-            </form>
+            </div>
           </div>
         </motion.section>
       </main>
@@ -1247,7 +1169,7 @@ function App() {
                   <Facebook className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="https://instagram.com"
+                  href="https://instagram.com/lattedacafes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-latte-jade hover:text-white transition-all"
