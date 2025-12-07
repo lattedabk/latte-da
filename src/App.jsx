@@ -584,10 +584,10 @@ function App() {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    most coffee sits in warehouses for six months before it hits your cup.  we thought that was weird.
+                    most coffee beans sit in storage for 6 months before it hits your cup.  we thought that was weird.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    we source coffee that's farm to cup in 10 days.  not because we're fancy.  because fresh coffee tastes better.  obviously.
+                    so we decided to serve the freshest coffee possible.  not because we're fancy. because fresh coffee and quality ingredients taste better.
                   </p>
                 </motion.div>
 
@@ -600,10 +600,12 @@ function App() {
                     transition={{ duration: 0.8, delay: 0.5 }}
                   >
                     <div className="text-left">
+                      <div className="text-lg text-gray-700 mb-2">our coffee:</div>
                       <div className="text-6xl md:text-7xl text-latte-jade font-bold">10</div>
                       <div className="text-sm text-gray-600 mt-2">days, farm to cup</div>
                     </div>
                     <div className="text-left">
+                      <div className="text-lg text-gray-700 mb-2">other coffee:</div>
                       <div className="text-6xl md:text-7xl text-black font-bold">180</div>
                       <div className="text-sm text-gray-600 mt-2">days, industry average</div>
                     </div>
@@ -618,8 +620,7 @@ function App() {
                   animate={aboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <p className="text-lg text-gray-700">everything else? same story. high quality. fresh daily.</p>
-                  <p className="text-lg text-gray-700">we don't cut corners.  we don't hoard beans in some warehouse in jersey.</p>
+                  <p className="text-lg text-gray-700">we don't hoard beans in some warehouse in jersey.</p>
                   <p className="text-2xl text-latte-jade">just good stuff, made right.</p>
                 </motion.div>
               </div>
