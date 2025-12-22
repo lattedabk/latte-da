@@ -128,9 +128,7 @@ function App() {
       title: 'pastries & light bites',
       items: [
         { name: 'croissant', price: '4.50' },
-        { name: 'granola bowl', price: '7.50' },
         { name: 'banana bread', price: '4.00' },
-        { name: 'overnight oats', price: '6.50' },
         { name: 'donuts', price: '3.50' },
         { name: 'danishes', price: '4.50' },
         { name: 'cookies', price: '3.00' },
