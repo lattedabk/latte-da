@@ -81,9 +81,7 @@ function App() {
         { name: 'iced latte', price: '5.50' },
         { name: 'iced macchiato', price: '5.00' },
         { name: 'cold brew', price: '4.50' },
-        { name: 'espresso tonic', price: '6.00' },
         { name: 'coconut espresso', price: '6.00' },
-        { name: 'coconut matcha', price: '6.50' },
         { name: 'shaken espresso', price: '5.50' },
       ]
     },
@@ -92,8 +90,7 @@ function App() {
       items: [
         { name: 'spanish latte', price: '6.00' },
         { name: 'brown sugar shaken espresso', price: '6.00' },
-        { name: 'black raspberry chip latte', price: '6.50' },
-        { name: 'strawberry matcha', price: '6.50' },
+        { name: 'guava matcha', price: '6.50' },
         { name: 'honey almond shaken espresso', price: '6.00' },
         { name: 'maple cinnamon latte', price: '6.00' },
         { name: 'caramel sea salt latte', price: '6.00' },
