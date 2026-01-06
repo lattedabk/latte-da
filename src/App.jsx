@@ -143,7 +143,7 @@ function App() {
 
 
   const hours = [
-    { day: 'monday - friday', time: '7:00 am - 4:00 pm' },
+    { day: 'monday - friday', time: '7:00 am - 5:00 pm' },
     { day: 'saturday & sunday', time: '8:00 am - 5:00 pm' },
   ]
 
