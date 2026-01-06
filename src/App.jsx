@@ -89,10 +89,10 @@ function App() {
       title: 'specialty drinks',
       items: [
         { name: 'spanish latte', price: '6.00' },
-        { name: 'brown sugar shaken espresso', price: '6.00' },
+        { name: 'banana bread latte', price: '6.00' },
         { name: 'guava matcha', price: '6.50' },
-        { name: 'honey almond shaken espresso', price: '6.00' },
-        { name: 'maple cinnamon latte', price: '6.00' },
+        { name: 'honey shaken espresso', price: '6.00' },
+        { name: 'brown sugar maple latte', price: '6.00' },
         { name: 'caramel sea salt latte', price: '6.00' },
       ]
     },
@@ -100,7 +100,7 @@ function App() {
       title: 'not espresso',
       items: [
         { name: 'matcha latte', price: '6.00' },
-        { name: 'matcha lemonade', price: '6.00' },
+        { name: 'coconut cloud matcha', price: '6.00' },
         { name: 'lavender matcha', price: '6.50' },
         { name: 'chai latte', price: '5.50' },
         { name: 'london fog', price: '5.50' },
