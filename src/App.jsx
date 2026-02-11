@@ -72,17 +72,16 @@ function App() {
         { name: 'cortado', price: '4.50' },
         { name: 'macchiato', price: '4.00' },
         { name: 'mocha', price: '6.00' },
-        { name: 'shaken espresso', price: '5.50' },
       ]
     },
     coffee: {
       title: 'iced iced baby',
       items: [
         { name: 'iced latte', price: '5.50' },
-        { name: 'iced macchiato', price: '5.00' },
-        { name: 'cold brew', price: '4.50' },
-        { name: 'coconut espresso', price: '6.00' },
+        { name: '18 hour steeped cold brew', price: '4.50' },
         { name: 'shaken espresso', price: '5.50' },
+        { name: 'pistachio cold foam cold brew', price: '6.00' },
+        { name: 'salted caramel cream cold brew', price: '6.00' },
       ]
     },
     specialty: {
@@ -90,20 +89,22 @@ function App() {
       items: [
         { name: 'spanish latte', price: '6.00' },
         { name: 'banana bread latte', price: '6.00' },
-        { name: 'guava matcha', price: '6.50' },
-        { name: 'honey shaken espresso', price: '6.00' },
+        { name: 'chai latte', price: '6.00' },
+        { name: 'cookie butter latte', price: '6.00' },
         { name: 'brown sugar maple latte', price: '6.00' },
         { name: 'caramel sea salt latte', price: '6.00' },
+        { name: 'xoxo raspberry mocha', price: '6.00' },
       ]
     },
     notespresso: {
-      title: 'not espresso',
+      title: 'ceremonial-grade matcha',
       items: [
         { name: 'matcha latte', price: '6.00' },
-        { name: 'coconut cloud matcha', price: '6.00' },
         { name: 'lavender matcha', price: '6.50' },
-        { name: 'chai latte', price: '5.50' },
-        { name: 'london fog', price: '5.50' },
+        { name: 'guava matcha latte', price: '6.50' },
+        { name: 'strawberry matcha latte', price: '6.50' },
+        { name: 'passionfruit matcha latte', price: '6.50' },
+        { name: 'banana bread matcha latte', price: '6.50' },
       ]
     },
     nocaffeine: {
