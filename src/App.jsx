@@ -93,7 +93,7 @@ function App() {
         { name: 'cookie butter latte', price: '6.00' },
         { name: 'brown sugar maple latte', price: '6.00' },
         { name: 'caramel sea salt latte', price: '6.00' },
-        { name: 'xoxo raspberry mocha', price: '6.00' },
+        { name: 'blueberry pie chai', price: '6.00' },
       ]
     },
     notespresso: {
@@ -105,6 +105,7 @@ function App() {
         { name: 'strawberry matcha latte', price: '6.50' },
         { name: 'passionfruit matcha latte', price: '6.50' },
         { name: 'banana bread matcha latte', price: '6.50' },
+        { name: 'blueberry matcha latte', price: '6.50' },
       ]
     },
     nocaffeine: {
@@ -399,27 +400,6 @@ function App() {
                   className="absolute w-[400px] h-[400px] md:w-[700px] md:h-[700px] opacity-20 -right-10 md:-right-20 pointer-events-none"
                 />
 
-                {/* Large Hero Mascot - Main Visual Element */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className="relative z-10"
-                >
-                  <motion.img
-                    src="/latte-da-dude.svg"
-                    alt="Latte Da Mascot"
-                    className="w-64 h-64 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] drop-shadow-2xl"
-                    animate={{
-                      y: [0, -20, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                </motion.div>
               </div>
             </div>
           </div>
@@ -803,38 +783,6 @@ function App() {
           {/* Background decoration */}
           <div className="absolute top-10 right-10 w-96 h-96 opacity-30 pointer-events-none">
             <img src="/coffee ring stain.svg" alt="" className="w-full h-full" />
-          </div>
-          {/* Coffee Splash - Desktop */}
-          <div className="absolute top-1/3 left-10 w-[350px] h-[350px] pointer-events-none hidden lg:block">
-            <motion.img
-              src="/coffee-splash.png"
-              alt=""
-              className="w-full h-full object-contain"
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </div>
-          {/* Coffee Splash - Mobile */}
-          <div className="lg:hidden flex justify-center mb-4 mt-8">
-            <motion.img
-              src="/coffee-splash.png"
-              alt=""
-              className="w-40 h-40 object-contain"
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
